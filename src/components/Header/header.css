@@ -1,0 +1,91 @@
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff159;
+    width: 100%;
+    padding: 5px 15px;
+}
+
+.header-1 {
+    width: 79%;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.logo-desktop {
+    height: 34px;
+    width: 134px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.logo-mobile {
+    display: none;
+}
+
+.input-header {
+    width: 650px;
+    height: 35px;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    margin-left: 10px;
+    padding-left: 15px;
+}
+
+.img-disney-header {
+    max-width: 340px;
+    max-height: 39px;
+}
+
+.menu-icon {
+    display: none;
+}
+
+
+@media (max-width: 700px) {
+    .logo-desktop {
+        display: none;
+    }
+
+    .logo-mobile {
+        display: block;
+        width: 50px;
+        height: 50px;
+    }
+
+    .img-disney-header {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 701px) {
+    .logo-desktop {
+        display: block;
+    }
+
+    .logo-mobile {
+        display: none;
+    }
+
+    .img-disney-header {
+        display: block;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .input-header {
+        width: 550px;
+        height: 35px;
+    }
+}
+
