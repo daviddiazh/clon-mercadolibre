@@ -23,7 +23,7 @@ export const Header: FC = () => {
     }
 
     const fetchSearch = async () => {
-        const url = `https://api.mercadolibre.com/sites/MLC/search?q=${userInput}`;
+        const url = `https://api.mercadolibre.com/sites/MLC/search?q=${userInput}&limit=6`;
 
         const resp = await fetch( url );
         const data = await resp.json();
