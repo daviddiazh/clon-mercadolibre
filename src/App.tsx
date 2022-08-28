@@ -1,10 +1,20 @@
 import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Header } from './components/Header/Header';
+import { Home } from './pages/Home';
+
+//https://github.com/devjaime/clone-mercadolibre/blob/master/src/context/ProductosContext.js
 
 const App = () => {
     return (
-        <>
-            <h1>Hola mundo</h1>
-        </>
+        <BrowserRouter>
+            <Header />
+            <Routes>
+                <Route path='/' element={ <Home /> } />
+
+                <Route path='/*' element={ <Home /> } />
+            </Routes>
+        </BrowserRouter>
     )
 }
 
