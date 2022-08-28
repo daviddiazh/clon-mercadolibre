@@ -1,7 +1,8 @@
 {
-  "name": "playing-react",
+  "name": "clone-mercado-libre",
+  "author": "David Diaz",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,7 +16,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.3.0",
+    "swiper": "^8.3.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",
