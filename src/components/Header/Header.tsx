@@ -32,6 +32,10 @@ export const Header: FC = () => {
         return setProducts(data);
     }
 
+    const onSubmitSearch = (event: any) => {
+        event?.preventDefault();
+    }
+
     useEffect(() => {
         fetchSearch();
 
@@ -47,7 +51,7 @@ export const Header: FC = () => {
                         <img src={meliLogoLarge} className='logo-desktop' />
                         <img src={meliLogo} className='logo-mobile' />
 
-                        <form className="search-header">
+                        <form className="search-header" onSubmit={ onSubmitSearch }>
                             <span className="search-icon-mobile"><AiOutlineSearch /></span>
                             <input 
                                 type="text" 
