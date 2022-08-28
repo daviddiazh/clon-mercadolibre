@@ -4,12 +4,12 @@ import { AiOutlineMenu, AiOutlineSearch, AiOutlineUser } from 'react-icons/ai';
 import { FiShoppingCart } from 'react-icons/fi';
 import { IoIosNotificationsOutline } from 'react-icons/io';
 import { IoLocationOutline } from 'react-icons/io5';
-import { BiChevronDown } from 'react-icons/bi';
+import { BiChevronDown, BiChevronRight } from 'react-icons/bi';
 import meliLogo from '../../assets/meli-logo.png';
 import meliLogoLarge from '../../assets/meli-large-logo.png';
 import disneyMeli from '../../assets/disney-meli.webp';
 import './header.css';
-import { IProduct } from '../../interfaces/Product';
+import { IProduct, Values } from '../../interfaces/Product';
 
 export const Header: FC = () => {
 
@@ -62,10 +62,24 @@ export const Header: FC = () => {
                     </Box>
                     <img src={disneyMeli} alt="Disney Meli" className="img-disney-header" />
                     <Box display='flex'>
-                        <span className='menu-icon'><AiOutlineMenu /></span>
-                        <span className='menu-icon'><FiShoppingCart /></span>
+                        <span className='menu-icon'  style={{ fontSize: '1.2rem' }}><AiOutlineMenu /></span>
+                        <span className='menu-icon'  style={{ fontSize: '1.2rem' }}><FiShoppingCart /></span>
                     </Box>
                 </nav>
+            </Box>
+
+            <Box className="header-2-mobile">
+                <Box sx={{ marginLeft: '0px', display: 'flex' }}>
+                    <span style={{ fontSize: 20, paddingRight: 5}}>
+                        <IoLocationOutline />
+                    </span>
+                    <Box sx={{ lineHeight: '25px' }}>
+                        <p style={{ color: '#333', fontSize: '0.85rem', margin: '0' }}>Enviar a David Medellin, Antioquia</p>
+                    </Box>
+                </Box>
+                <span style={{ color: '#aeabab', lineHeight: 2, cursor: 'pointer' }}>
+                    <BiChevronRight />
+                </span>
             </Box>
 
             <Box className="second-header">
@@ -76,35 +90,34 @@ export const Header: FC = () => {
                                 <IoLocationOutline />
                             </span>
                             <Box sx={{ lineHeight: '15px' }}>
-                                <p style={{ color: '#636363 ', fontSize: '0.75rem', margin: '0' }}>Enviar a David</p>
+                                <p style={{ color: '#595858 ', fontSize: '0.75rem', margin: '0' }}>Enviar a David</p>
                                 <p style={{ color: '#333', fontSize: '0.85rem', margin: '0' }}>Med, Antioq...</p>
                             </Box>
                         </Box>
                     </Box>
 
-                    <Box className="header-3">
+                    <Box className="header-3" paddingLeft={0}>
                         <p style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>Categorias <BiChevronDown /></p>
                         <p>Ofertas</p>
                         <p>Historial</p>
                         <p>Supermercado</p>
-                        <p>Moda</p>
                         <p>Vender</p>
                         <p>Ayuda/PQR</p>
                     </Box>
 
-                    <Box className="header-4">
-                        <Box display="flex" alignItems='center' paddingRight={3}>
-                            <span><AiOutlineUser /></span>
+                    <Box className="header-4" paddingLeft={7}>
+                        <Box display="flex" alignItems='center' paddingLeft={3} >
+                            <span style={{ fontSize: 20}}><AiOutlineUser /></span>
                             <p style={{ paddingLeft: 2, display: 'flex', alignItems: 'center', cursor: 'pointer' }}>David <BiChevronDown /></p>
                         </Box>
                         <p>Mis compras</p>
-                        <p style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>Favoritos <BiChevronDown /></p>
-                        <span><IoIosNotificationsOutline /></span>
-                        <span><FiShoppingCart /></span>
+                        <span style={{ fontSize: 18, cursor: 'pointer', padding: '0 10px'}}><IoIosNotificationsOutline /></span>
+                        <span style={{ fontSize: 18, cursor: 'pointer'}}><FiShoppingCart /></span>
                     </Box>
                 </Box>
             </Box>
-            <Box className="autocomplete">
+            
+            <div className="autocomplete">
                 {
                     products && products?.results?.filter(producto => producto.title?.toLowerCase().includes(userInput.toLowerCase())).map( producto => (
                         <>
@@ -112,7 +125,8 @@ export const Header: FC = () => {
                         </>
                     ))
                 }
-            </Box>
+
+            </div>
         </>
     )
 }
