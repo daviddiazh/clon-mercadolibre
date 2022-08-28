@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FcNext, FcPrevious } from 'react-icons/fc';
 import './slider.css';
 
@@ -19,12 +19,10 @@ export const Slider = ({ sliderImages }: any) => {
     useEffect(() => {
 
         const timer = setTimeout(() => {
-            console.log('CAMBIO DE IMAGE - SLIDER')
             onNextImage();
         }, 5000)
         
         return () => {
-            console.log('DESMONTAJE DE IMAGEN')
             clearTimeout(timer);
         }
     }, [ currentImage ]);
