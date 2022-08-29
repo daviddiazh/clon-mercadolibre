@@ -8,6 +8,8 @@ export const Home = () => {
     return (
         <main>
             <Slider sliderImages={ sliderImages } /> 
+
+            
         </main>
     )
 }

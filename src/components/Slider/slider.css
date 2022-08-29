@@ -21,6 +21,29 @@
 }
 
 
+.container-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.dot { /* PUNTO */
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1px solid #f1f1f1;
+    margin: 0 3px;
+    background: rgba(32, 32, 32, 0.499); 
+}
+.dot.active {
+    width: 7px;
+    height: 7px;
+    border: 1px solid rgba(0, 0, 0, 0.499);
+    background: #f1f1f1;
+}
+
+
 @media (max-width: 1690px) {
     .slide {
         max-width: 1300px;

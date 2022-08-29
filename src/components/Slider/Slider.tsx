@@ -16,6 +16,12 @@ export const Slider = ({ sliderImages }: any) => {
         setCurrentImage( currentImage === 0 ? sliderImages.length - 1 : currentImage - 1 );
     }
 
+    const moveDot = (index: any) => {
+        
+        console.log('index: ', index)
+        setCurrentImage(index)
+    }
+
     useEffect(() => {
 
         const timer = setTimeout(() => {
@@ -37,7 +43,15 @@ export const Slider = ({ sliderImages }: any) => {
                         <div>
                             {
                                 currentImage === index && (
-                                    <img key={ index } src={ image } alt="Slider Image" className="slide" />
+                                    <>
+                                        <img key={ index } src={ image } alt="Slider Image" className="slide" />
+                                        <div className="container-dots">
+                                            {Array.from({length: sliderImages.length}).map((item, index) => (
+                                                <div onClick={ () => moveDot( index === sliderImages.length - 1 ? 0 : index + 1 ) } className={currentImage === index + 1 ? "dot active" : "dot"}
+                                                ></div>
+                                            ))}
+                                        </div>
+                                    </>
                                 )
                             }
                         </div>
@@ -45,7 +59,7 @@ export const Slider = ({ sliderImages }: any) => {
                 }
                 <button onClick={ onNextImage } className="btn-slider"><FcNext /></button>
             </div>
-            
+
         </>
     )
 }
