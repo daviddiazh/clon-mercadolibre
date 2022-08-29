@@ -6,11 +6,14 @@ import { AiOutlineBank } from 'react-icons/ai';
 import { FaHandsHelping } from 'react-icons/fa';
 import { IoAddCircleSharp } from 'react-icons/io5';
 
+import { mockOffers } from '../api/mock-offers';
 
 export const Home = () => {
 
     const sliderImages = ['https://drive.google.com/uc?export=view&id=1u6KWKFUGMzuwTKJCom2koa1dUqXHIEJN', 'https://drive.google.com/uc?export=view&id=1K_-ZQVZiY2EFGPr8JAefNl-98KG7qh0s', 'https://drive.google.com/uc?export=view&id=1N0BroYVUbp8HIm4f9NS-8Dl-IpmhsNfq', 'https://drive.google.com/uc?export=view&id=1Y7UX5YgnjrPAktu8kitU8aYDfiVxovtU', 'https://drive.google.com/uc?export=view&id=1JRFTT_wtiwHlIzkUonbCzwdK4-MFjMJN', 'https://drive.google.com/uc?export=view&id=1Ubw3YdJ1JJZ8kquW637Eu01jgKOL0qTq', 'https://drive.google.com/uc?export=view&id=1Q5OhLmcQkmtZOk7bmsbcfZapWEihXgE2'];
 
+
+    console.log('mockOffers: ', mockOffers)
 
     return (
         <main>
@@ -62,14 +65,23 @@ export const Home = () => {
                     <h1>Ofertas</h1>
                     <p>Ver más</p>
 
-                    <div>
+                    <div className=''>
+                        <div className="">
+                            {
+                                mockOffers && mockOffers?.map( product => (
+                                    <div key={ product.id }>
+                                        <img src={ product.urlImage } alt={ product.description } />
+                                        <p>$ { product.priceOff } <span>{ product.off }% OFF</span></p>
+                                        <p>{ product.freeSend ? 'Envío gratis' : null }</p>
+                                    </div>
+                                ))
 
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <br />
-            <br />
             <br />
             <br />
 
