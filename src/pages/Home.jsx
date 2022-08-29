@@ -51,7 +51,7 @@ export const Home = () => {
                         </span>
                         <div>
                             <p>Más medios de pago</p>
-                            <p>Ver más</p>
+                            <p>Ver todos</p>
                         </div>
                     </div>
                 </div>
