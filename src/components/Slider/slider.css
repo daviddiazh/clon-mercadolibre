@@ -16,7 +16,7 @@
     border: none;
     font-size: 1.8rem;
     cursor: pointer;
-    /* background-color: #fff; */
+    background-color: transparent; 
     padding: 0 10px;
 }
 

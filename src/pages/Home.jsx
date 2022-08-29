@@ -57,7 +57,17 @@ export const Home = () => {
                 </div>
             </div>
 
-            <br />
+            <div className="third-container-home">
+                <div>
+                    <h1>Ofertas</h1>
+                    <p>Ver más</p>
+
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+            
             <br />
             <br />
             <br />
