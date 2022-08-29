@@ -9,7 +9,7 @@ import meliLogo from '../../assets/meli-logo.png';
 import meliLogoLarge from '../../assets/meli-large-logo.png';
 import disneyMeli from '../../assets/disney-meli.webp';
 import './header.css';
-import { IProduct, Values } from '../../interfaces/Product';
+import { IProduct } from '../../interfaces/Product';
 
 export const Header: FC = () => {
 

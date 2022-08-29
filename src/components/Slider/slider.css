@@ -16,7 +16,7 @@
     border: none;
     font-size: 1.8rem;
     cursor: pointer;
-    background-color: #fff;
+    /* background-color: #fff; */
     padding: 0 10px;
 }
 
@@ -34,7 +34,7 @@
     border-radius: 50%;
     border: 1px solid #f1f1f1;
     margin: 0 3px;
-    background: rgba(32, 32, 32, 0.499); 
+    background: rgba(32, 32, 32, 0.29); 
 }
 .dot.active {
     width: 7px;
