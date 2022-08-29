@@ -32,7 +32,7 @@ export const Home = () => {
                             <AiOutlineBank />
                         </span>
                         <div>
-                            <p>Transferencia desde tu banco</p>
+                            <p style={{ lineHeight: 1 }}>Transferencia desde tu banco</p>
                             <p>Ver más</p>
                         </div>
                     </div>
@@ -45,7 +45,7 @@ export const Home = () => {
                             <p>Ver más</p>
                         </div>
                     </div>
-                    <div className="info-pay-item">
+                    <div className="info-pay-item" style={{ borderLeft: '0.5px solid #cecece' }}>
                         <span>
                             <IoAddCircleSharp />
                         </span>
@@ -57,6 +57,11 @@ export const Home = () => {
                 </div>
             </div>
 
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
 
         </main>
     )

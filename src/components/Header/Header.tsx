@@ -90,7 +90,7 @@ export const Header: FC = () => {
                 <Box className="second-header-main">
                     <Box className="header-2">
                         <Box sx={{ width: '140px', marginLeft: '0px', display: 'flex' }}>
-                            <span style={{ fontSize: 25 , paddingRight: 5}}>
+                            <span style={{ fontSize: 25 , paddingRight: 3}}>
                                 <IoLocationOutline />
                             </span>
                             <Box sx={{ lineHeight: '15px' }}>
@@ -100,7 +100,7 @@ export const Header: FC = () => {
                         </Box>
                     </Box>
 
-                    <Box className="header-3" paddingLeft={0}>
+                    <Box className="header-3" paddingLeft={3}>
                         <p style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>Categorias <BiChevronDown /></p>
                         <p>Ofertas</p>
                         <p>Historial</p>
@@ -109,7 +109,7 @@ export const Header: FC = () => {
                         <p>Ayuda/PQR</p>
                     </Box>
 
-                    <Box className="header-4" paddingLeft={7}>
+                    <Box className="header-4" paddingLeft={10}>
                         <Box display="flex" alignItems='center' paddingLeft={3} >
                             <span style={{ fontSize: 20}}><AiOutlineUser /></span>
                             <p style={{ paddingLeft: 2, display: 'flex', alignItems: 'center', cursor: 'pointer' }}>David <BiChevronDown /></p>

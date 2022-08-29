@@ -1,6 +1,7 @@
 main {
     background-color: #ebebeb;
     width: 100%;
+    font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
 }
 
 
@@ -16,13 +17,14 @@ main {
     margin: 0 auto;
     background-color: #fff;
     display: flex;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
 }
 
 .info-pay-item {
     display: flex;
     width: calc(100% / 4);
     align-items: center;
-    line-height: 4px;
+    line-height: 0px;
 }
 
 .info-pay-item span {
@@ -32,6 +34,15 @@ main {
     font-size: 22;
     padding: 12px;
     margin: 0 15px;
+    cursor: pointer;
+}
+
+.info-pay-item p:nth-child(1) {
+    color: #000;
+    line-height: 9px;
+    font-weight: 500;
+    font-size: 19px;
+    text-align: left;
 }
 
 .info-pay-item p:nth-child(2) {

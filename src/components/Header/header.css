@@ -22,7 +22,7 @@
 }
 
 .logo-desktop {
-    width: 140px;
+    width: 150px;
     height: 34px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -34,7 +34,7 @@
 }
 
 .search-header {
-    width: 500px;
+    width: 600px;
     height: 40px;
     display: flex;
     border-radius: 1px;
@@ -143,6 +143,12 @@
     font-size: 20px;
 }
 
+
+@media (max-width: 1105px) {
+    .search-header {
+        width: 510px;
+    }
+}
 
 @media (max-width: 1020px) {
 
