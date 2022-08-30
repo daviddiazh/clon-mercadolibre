@@ -48,58 +48,62 @@ main {
 }
 
 .info-pay-item p:nth-child(2) {
-    color: #1259c3;
+    color: #2a70d9;
     font-size: 13px;
     text-align: left;
+    font-weight: 500;
 }
 
 .info-pay-item p:nth-child(2):hover {
-    color: #083c88;
+    color: #1259c3;
     cursor: pointer;
 }
 
 
-.third-container-home {
+.offers-container-home {
     max-width: 1090px;
     margin: 0 auto;
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
-.third-container-home > div {
+.offers-container-home > div {
     display: flex;
     align-items: center;
 }
 
-.third-container-home > div:nth-child(0) {
+.offers-container-home > div:nth-child(0) {
     display: flex;
     align-items: center;
 }
 
-.third-container-home > div > h1 {
-    font-weight: 400;
+.offers-container-home > div > h2 {
+    font-weight: 300;
+    color: #666;
+    font-size: 1.8rem;
 }
 
-.third-container-home > div > p {
-    color: #1259c3;
-    padding-left: 20px;
+.offers-container-home > div > p {
+    color: #2a70d9;
+    padding-left: 15px;
     padding-top: 10px;
     font-size: 17px;
     cursor: pointer;
 }
 
-.third-container-home > div > p:hover {
-    color: #083c88;
+.offers-container-home > div > p:hover {
+    color: #1259c3;
 }
 
-.third-container-cards {
+.offers-container-cards {
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
+    margin-top: -8px;
 }
 
-.third-card-home {
+.offers-card-home {
     width: 224px;
-    height: 340px;
+    height: 335px;
     margin: 0 7px;
     background-color: #fff;
     cursor: pointer;
@@ -108,7 +112,7 @@ main {
     margin-bottom: 50px; /**/
 }
 
-.third-card-home > img {
+.offers-card-home > img {
     width: 224px;
     height: 220px;
     border-bottom: 0.9px solid #cecece;
@@ -131,7 +135,7 @@ main {
     display: none;
 }
 
-.third-container-cards:hover > .btn-next-offers {
+.offers-container-cards:hover > .btn-next-offers {
     display: block;
     width: 70px;
     height: 70px;
@@ -146,15 +150,8 @@ main {
     font-size: 1.6rem;
 }
 
-.third-container-cards:hover > .btn-next-offers:hover {
+.offers-container-cards:hover > .btn-next-offers:hover {
     box-shadow: 0 7px 16px 0 rgba(0,0,0,.2),0 1px 3px 0 rgba(0,0,0,.1);
-}
-
-@media (max-width: 1205px) {
-    .third-container-home {
-        padding-left: 7px;
-        padding-right: 7px;
-    }
 }
 
 @media (max-width: 1055px) {
@@ -177,9 +174,13 @@ main {
         padding-right: 15px;
     }
 
-    .third-container-home {
+    .offers-container-home {
         padding-left: 10px;
         padding-right: 10px;
+    }
+
+    .offers-container-home > div > h2 {
+        padding-left: 5px;
     }
 }
 
@@ -208,7 +209,7 @@ main {
         padding-right: 20px;
     }
 
-    .third-container-home {
+    .offers-container-home {
         padding-left: 15px;
         padding-right: 15px;
     }
