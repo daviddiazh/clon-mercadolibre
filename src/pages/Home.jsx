@@ -7,6 +7,7 @@ import { FaHandsHelping } from 'react-icons/fa';
 import { IoAddCircleSharp } from 'react-icons/io5';
 
 import { mockOffers } from '../api/mock-offers';
+import { FcNext } from 'react-icons/fc';
 
 export const Home = () => {
 
@@ -64,21 +65,19 @@ export const Home = () => {
                 <div>
                     <h1>Ofertas</h1>
                     <p>Ver más</p>
-
-                    <div className=''>
-                        <div className="">
-                            {
-                                mockOffers && mockOffers?.map( product => (
-                                    <div key={ product.id }>
-                                        <img src={ product.urlImage } alt={ product.description } />
-                                        <p>$ { product.priceOff } <span>{ product.off }% OFF</span></p>
-                                        <p>{ product.freeSend ? 'Envío gratis' : null }</p>
-                                    </div>
-                                ))
-
-                            }
-                        </div>
-                    </div>
+                </div>
+                <div className="third-container-cards">
+                    {
+                        mockOffers && mockOffers?.map( product => (
+                            <div className="third-card-home" key={ product.id }>
+                                <img src={ product.urlImage } alt={ product.description } />
+                                <p>$ { product.priceOff } <span>{ product.off }% OFF</span></p>
+                                <p>{ product.freeSend ? 'Envío gratis' : null }</p>
+                            </div>
+                        ))
+                    }
+                    
+                    <button className="btn-next-offers"><FcNext /></button>
                 </div>
             </div>
             

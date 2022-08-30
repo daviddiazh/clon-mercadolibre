@@ -6,7 +6,7 @@ export const mockOffers = [
         originalPrice: '157.358',
         description: 'Amazon Fire TV Stick Lite de voz Full HD 8GB negro con 1GB',
         freeSend: true,
-        urlImage: '../assets/product1-offers.webp'
+        urlImage: 'https://drive.google.com/uc?export=view&id=1Xh4w8JAdmPt5k1vS4OFlcgQl3pJDc3YH'
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ export const mockOffers = [
         originalPrice: '1.899.358',
         description: 'Caminadora Electrica Banda Trotadora 1.75hp 3niveles Inclina',
         freeSend: false,
-        urlImage: '../assets/product2-offers.webp'
+        urlImage: 'https://drive.google.com/uc?export=view&id=1ttEJ8fSVvyFJCKkxIYsQAupMuOHZFf8Z'
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ export const mockOffers = [
         originalPrice: '1.499.900',
         description: 'Bicicleta Montaña Todoterreno Rin 29 Shimano 21 Velocidades',
         freeSend: true,
-        urlImage: '../assets/product3-offers.webp'
+        urlImage: 'https://drive.google.com/uc?export=view&id=1uqMPLtxIUH4CC6Ulr70eWA87I_QQtqBw'
     },
     {
         id: 4,
@@ -33,7 +33,7 @@ export const mockOffers = [
         originalPrice: '64.800',
         description: 'Difusor De Aromas 500 Ml Control Remoto Humidificador ',
         freeSend: false,
-        urlImage: '../assets/product4-offers.webp'
+        urlImage: 'https://drive.google.com/uc?export=view&id=1U7tW7T5d5HRQHTXv-UepJbDrkP7Y5Wbq'
     },
     {
         id: 5,
@@ -42,6 +42,6 @@ export const mockOffers = [
         originalPrice: '1.200.000',
         description: 'Laptop HP 240 G7 gris 14", Intel Celeron N4020 8GB de RAM',
         freeSend: true,
-        urlImage: '../assets/product5-offers.webp'
+        urlImage: 'https://drive.google.com/uc?export=view&id=10zeNsOSxxm-jIWw0JssPGik3Y_U34LMQ'
     },
 ];

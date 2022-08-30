@@ -14,7 +14,7 @@ main {
 
 .info-pay {
     /* max-width: 980px; */
-    max-width: 1180px;
+    max-width: 1090px;
     height: 90px;
     margin: 0 auto;
     background-color: #fff;
@@ -41,9 +41,9 @@ main {
 
 .info-pay-item p:nth-child(1) {
     color: #000;
-    line-height: 9px;
+    line-height: 8px;
     font-weight: 500;
-    font-size: 19px;
+    font-size: 16px;
     text-align: left;
 }
 
@@ -59,6 +59,17 @@ main {
 }
 
 
+.third-container-home {
+    max-width: 1090px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.third-container-home > div {
+    display: flex;
+    align-items: center;
+}
+
 .third-container-home > div:nth-child(0) {
     display: flex;
     align-items: center;
@@ -70,11 +81,64 @@ main {
 
 .third-container-home > div > p {
     color: #1259c3;
-    padding-left: 17px;
-    padding-top: 7px;
+    padding-left: 20px;
+    padding-top: 10px;
     font-size: 17px;
+    cursor: pointer;
 }
 
+.third-container-home > div > p:hover {
+    color: #083c88;
+}
+
+.third-container-cards {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.third-card-home {
+    width: 224px;
+    height: 347px;
+    margin: 0 7px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.third-card-home > img {
+    width: 224px;
+    height: 220px;
+    border-bottom: 0.9px solid #cecece;
+}
+
+.third-card-home > p {
+    font-size: 26px;
+    color: #083c88;
+}
+
+
+.btn-next-offers {
+    display: none;
+}
+
+.third-container-cards:hover > .btn-next-offers {
+    display: block;
+    width: 70px;
+    height: 70px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #fff;
+    position: fixed;
+    right: 35px;
+    cursor: pointer;
+    border: none;
+    font-size: 1.6rem;
+}
+
+.third-container-cards:hover > .btn-next-offers:hover {
+    box-shadow: 0 7px 16px 0 rgba(0,0,0,.2),0 1px 3px 0 rgba(0,0,0,.1);
+}
 
 @media (max-width: 1205px) {
     .third-container-home {
@@ -142,13 +206,6 @@ main {
 
 @media (max-width: 555px) {
     .info-pay-item p:nth-child(1) {
-        line-height: 15px; 
+        line-height: 17px; 
     }
-}
-
-
-.third-container-home {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding-top: 40px;
 }
