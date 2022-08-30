@@ -63,7 +63,7 @@ export const Home = () => {
 
             <div className="third-container-home">
                 <div>
-                    <h1>Ofertas</h1>
+                    <h1 style={{ paddingLeft: '5px' }}>Ofertas</h1>
                     <p>Ver más</p>
                 </div>
                 <div className="third-container-cards">
@@ -71,12 +71,11 @@ export const Home = () => {
                         mockOffers && mockOffers?.map( product => (
                             <div className="third-card-home" key={ product.id }>
                                 <img src={ product.urlImage } alt={ product.description } />
-                                <p>$ { product.priceOff } <span>{ product.off }% OFF</span></p>
-                                <p>{ product.freeSend ? 'Envío gratis' : null }</p>
+                                <p className="card-text-pricing-off">$ { product.priceOff } <span className="card-text-off">{ product.off }% OFF</span></p>
+                                <p style={{ fontSize: '0.9rem', paddingLeft: '0.9rem', fontWeight: 600, color: '#00a650', marginTop: '-20px' }}>{ product.freeSend ? 'Envío gratis' : null }</p>
                             </div>
                         ))
                     }
-                    
                     <button className="btn-next-offers"><FcNext /></button>
                 </div>
             </div>

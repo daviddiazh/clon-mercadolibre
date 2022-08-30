@@ -62,7 +62,7 @@ main {
 .third-container-home {
     max-width: 1090px;
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 40px;
 }
 
 .third-container-home > div {
@@ -99,10 +99,13 @@ main {
 
 .third-card-home {
     width: 224px;
-    height: 347px;
+    height: 340px;
     margin: 0 7px;
     background-color: #fff;
     cursor: pointer;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.2) 0px 1px 1px -1px;
+    margin-bottom: 50px; /**/
 }
 
 .third-card-home > img {
@@ -111,9 +114,16 @@ main {
     border-bottom: 0.9px solid #cecece;
 }
 
-.third-card-home > p {
-    font-size: 26px;
-    color: #083c88;
+.card-text-pricing-off {
+    font-size: 1.4rem;
+    padding-left: 0.8rem;
+    margin-top: 10px;
+}
+
+.card-text-off {
+    font-size: 0.9rem;
+    padding-left: 0.3rem;
+    color: #00a650;
 }
 
 
@@ -130,7 +140,7 @@ main {
     border-radius: 50%;
     background: #fff;
     position: fixed;
-    right: 35px;
+    right: 0;
     cursor: pointer;
     border: none;
     font-size: 1.6rem;
@@ -142,8 +152,8 @@ main {
 
 @media (max-width: 1205px) {
     .third-container-home {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 7px;
+        padding-right: 7px;
     }
 }
 
@@ -168,8 +178,8 @@ main {
     }
 
     .third-container-home {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -199,8 +209,8 @@ main {
     }
 
     .third-container-home {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
