@@ -17,7 +17,6 @@ export const Header: FC = () => {
     const [ products, setProducts ] = useState<IProduct>({});
 
     const onChangeInput = ({ target }: any) => {
-        //if( target.value <= 1 ) return;
 
         setUserInput(target.value);
     }
@@ -135,17 +134,6 @@ export const Header: FC = () => {
                     </Box>
                 </Box>
             </Box>
-            
-            {/* <div className="autocomplete">
-                {
-                    products && products?.results?.filter(producto => producto.title?.toLowerCase().includes(userInput.toLowerCase())).map( producto => (
-                        <>
-                            <p>{producto?.title}</p>
-                        </>
-                    ))
-                }
-
-            </div> */}
         </>
     )
 }
