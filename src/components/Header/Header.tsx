@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useState } from 'react'
 import { Box } from '@mui/material';
 import { AiOutlineMenu, AiOutlineSearch, AiOutlineUser } from 'react-icons/ai';
-import { FiShoppingCart } from 'react-icons/fi';
+import { FiSearch, FiShoppingCart } from 'react-icons/fi';
 import { IoIosNotificationsOutline } from 'react-icons/io';
 import { IoLocationOutline } from 'react-icons/io5';
 import { BiChevronDown, BiChevronRight } from 'react-icons/bi';
@@ -52,16 +52,30 @@ export const Header: FC = () => {
                         <img src={meliLogo} className='logo-mobile' />
 
                         <form className="search-header" onSubmit={ onSubmitSearch }>
-                            <span className="search-icon-mobile"><AiOutlineSearch /></span>
-                            <input 
-                                type="text" 
-                                name="search"
-                                placeholder="Buscar productos, marcas y más..."
-                                className="input-header"
-                                onChange={onChangeInput}
-                                value={userInput}
-                            />
-                            <span className="search-icon-desktop"><AiOutlineSearch /></span>
+                            <div style={{ display: 'flex', height: '100%' }}>
+                                <span className="search-icon-mobile"><AiOutlineSearch /></span>
+                                <input 
+                                    type="text" 
+                                    name="search"
+                                    placeholder="Buscar productos, marcas y más..."
+                                    className="input-header"
+                                    onChange={onChangeInput}
+                                    value={userInput}
+                                />
+                                <span className="search-icon-desktop"><AiOutlineSearch /></span>
+                            </div>
+
+                            <div className="autocomplete">
+                                {
+                                    products && products?.results?.filter(producto => producto.title?.toLowerCase().includes(userInput.toLowerCase())).map( producto => (
+                                        <div className="autocomplete-element">
+                                            <span style={{ color: '#cecece', paddingRight: 10, paddingTop: 3 }}><FiSearch /></span>
+                                            <p>{producto?.title?.substring(0, 40) + '...'}</p>
+                                        </div>
+                                    ))
+                                }
+
+                            </div>
                         </form>
                     </Box>
                     <img src={disneyMeli} alt="Disney Meli" className="img-disney-header" />
@@ -122,7 +136,7 @@ export const Header: FC = () => {
                 </Box>
             </Box>
             
-            <div className="autocomplete">
+            {/* <div className="autocomplete">
                 {
                     products && products?.results?.filter(producto => producto.title?.toLowerCase().includes(userInput.toLowerCase())).map( producto => (
                         <>
@@ -131,7 +145,7 @@ export const Header: FC = () => {
                     ))
                 }
 
-            </div>
+            </div> */}
         </>
     )
 }

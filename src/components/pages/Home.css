@@ -155,7 +155,7 @@ main {
     font-size: 1.6rem;
 }
 
-.offers-container-cards:hover > .btn-next-offers:hover {
+.offers-container-cards:hover ~ .btn-next-offers:hover {
     box-shadow: 0 7px 16px 0 rgba(0,0,0,.2),0 1px 3px 0 rgba(0,0,0,.1);
 }
 
@@ -170,6 +170,12 @@ main {
     
     .info-pay-item:nth-child(3) {
         display: none;
+    }
+
+    .btn-next-offers {
+        display: none;
+        top: 50%;
+        margin-right: 0px;
     }
 }
 
