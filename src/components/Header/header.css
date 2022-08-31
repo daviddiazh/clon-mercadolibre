@@ -135,7 +135,8 @@
 }
 
 .autocomplete {
-    z-index: 9;
+    position: relative;
+    z-index: 99;
     margin-top: -80px;
     background-color: #fff;
     width: 500px;

@@ -64,6 +64,7 @@ main {
     max-width: 1090px;
     margin: 0 auto;
     padding-top: 20px;
+    position: relative;
 }
 
 .offers-container-home > div {
@@ -99,6 +100,8 @@ main {
     overflow-x: scroll;
     overflow-y: hidden;
     margin-top: -8px;
+    position: relative;
+    /* margin-right: 0; */
 }
 
 .offers-card-home {
@@ -133,9 +136,11 @@ main {
 
 .btn-next-offers {
     display: none;
+    top: 50%;
+    margin-right: -30px;
 }
 
-.offers-container-cards:hover > .btn-next-offers {
+.offers-container-cards:hover ~ .btn-next-offers {
     display: block;
     width: 70px;
     height: 70px;
@@ -143,8 +148,8 @@ main {
     -webkit-border-radius: 50%;
     border-radius: 50%;
     background: #fff;
-    position: fixed;
-    right: 0;
+    position: absolute;
+    right: 0px;
     cursor: pointer;
     border: none;
     font-size: 1.6rem;

@@ -71,6 +71,7 @@ export const Header: FC = () => {
                     </Box>
                 </nav>
             </Box>
+            
 
             <Box className="header-2-mobile">
                 <Box sx={{ marginLeft: '0px', display: 'flex' }}>
