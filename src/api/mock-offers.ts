@@ -24,7 +24,7 @@ export const mockOffers = [
         originalPrice: '1.499.900',
         description: 'Bicicleta Montaña Todoterreno Rin 29 Shimano 21 Velocidades',
         freeSend: true,
-        urlImage: 'https://drive.google.com/uc?export=view&id=1uqMPLtxIUH4CC6Ulr70eWA87I_QQtqBw'
+        urlImage: 'https://drive.google.com/uc?export=view&id=1Fighg9WHP8vEqMA0mnNQ_B3CIzcKnQRm'
     },
     {
         id: 4,

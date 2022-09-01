@@ -112,7 +112,7 @@ export const Home = () => {
                         {
                             mockSuscription?.map( content => (
                                 <div key={ content.id } style={{ display: 'flex', alignItems: 'center' }}>
-                                    <span><img src={ content.urlImage } width={ 45 } height={ 35 } alt={ content.description } /></span>
+                                    <span><img src={ content.urlImage } width={ 50 } height={ 45 } alt={ content.description } /></span>
                                     <p>{ content.description }</p>
                                 </div>
                             ))
@@ -122,6 +122,17 @@ export const Home = () => {
                 <div style={{ borderBottom: '1px solid #ededed', width: '100%' }} />
                 <div style={{ display: 'flex', justifyContent: 'end' }}>
                     <button className="btn-suscription">Suscríbete</button>
+                </div>
+            </div>
+            
+            <div>
+                <div>
+                    <h2>Beneficios de Mercado Puntos</h2>
+                    <p>Ver todos los beneficios</p>
+                </div>
+
+                <div>
+                    
                 </div>
             </div>
             

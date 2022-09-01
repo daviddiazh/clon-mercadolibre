@@ -155,8 +155,12 @@ main {
 }
 
 .offers-container-cards:hover ~ .btn-next-offers{
-    box-shadow: 0 7px 16px 0 rgba(0,0,0,.2),0 1px 3px 0 rgba(0,0,0,.1);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.19);
 }
+
+/* .offers-container-cards:hover ~ .btn-next-offers:hover{
+    box-shadow: 0 7px 16px 0 rgba(0,0,0,.2),0 1px 3px 0 rgba(0,0,0,.1);
+} */
 
 
 .suscription-level-container-home {
@@ -230,7 +234,13 @@ main {
     font-size: 16px;
     font-weight: 600;
     margin: 20px 30px;
+    cursor: pointer;
 }
+
+.btn-suscription:hover {
+    background-color: #2667ca;
+}
+
 
 
 @media (max-width: 1055px) {
