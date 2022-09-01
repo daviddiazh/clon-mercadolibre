@@ -64,7 +64,7 @@ main {
     max-width: 1090px;
     margin: 0 auto;
     padding-top: 20px;
-    position: relative;
+    position: relative; 
 }
 
 .offers-container-home > div {
@@ -81,6 +81,7 @@ main {
     font-weight: 300;
     color: #666;
     font-size: 1.8rem;
+    padding-left: 5px;
 }
 
 .offers-container-home > div > p {
@@ -106,7 +107,7 @@ main {
 .offers-card-home {
     width: 224px;
     height: 335px;
-    margin: 0 7px;
+    margin: 0 5px;
     background-color: #fff;
     cursor: pointer;
     border-radius: 5px;
@@ -153,9 +154,84 @@ main {
     font-size: 1.6rem;
 }
 
-.offers-container-cards:hover ~ .btn-next-offers:hover {
+.offers-container-cards:hover ~ .btn-next-offers{
     box-shadow: 0 7px 16px 0 rgba(0,0,0,.2),0 1px 3px 0 rgba(0,0,0,.1);
 }
+
+
+.suscription-level-container-home {
+    max-width: 1090px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 6px;
+    background-color: #fff;
+    margin-top: 70px;
+}
+
+.header-suscription-level {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg,#a90f90 55%,#0c1a51);
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    border-radius: 6px 6px 0 0px;
+    padding: 0 30px;
+}
+
+.header-suscription-level h3 {
+    font-size: 25px;
+}
+
+.header-pricing-suscription {
+    line-height: 0;
+    padding-top: 9px;
+    padding-left: 7px;
+    border-left: 2px solid #fff;
+    height: 45px;
+}
+
+.header-pricing-suscription h4 {
+    font-weight: 600;
+    font-size: 21px;
+    margin: 22px 0;
+}
+
+.content-container-suscription {
+    padding: 5px 30px 10px 30px;
+}
+
+.content-suscription {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.content-suscription > div {
+    width: 350px;
+    padding-bottom: 10px;
+}
+
+.content-suscription > div > span {
+    border-radius: 100%;
+    padding: 12px;
+    margin: 0 15px;
+    cursor: pointer;
+    border: 1px solid #ededed;
+}
+
+.btn-suscription {
+    border: none;
+    background-color: #3179e5;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 20px 30px;
+}
+
 
 @media (max-width: 1055px) {
     .info-pay-item {
@@ -175,6 +251,25 @@ main {
         top: 50%;
         margin-right: 0px;
     }
+
+    .second-container-home {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .offers-container-home {
+        padding-left: 10px;
+        padding-right: 15px;
+    }
+
+    .offers-container-home > div > h2 {
+        padding-left: 5px;
+    }
+
+    .suscription-level-container-home {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 }
 
 @media (max-width: 1020px) {
@@ -184,12 +279,17 @@ main {
     }
 
     .offers-container-home {
-        padding-left: 10px;
+        padding-left: 7px;
         padding-right: 10px;
     }
 
     .offers-container-home > div > h2 {
-        padding-left: 5px;
+        padding-left: 4px;
+    }
+
+    .suscription-level-container-home {
+        margin-left: 7px;
+        margin-right: 15px;
     }
 }
 
@@ -197,7 +297,12 @@ main {
     .second-container-home {
         padding-top: 305px;
         padding-left: 10px;
-        padding-right: 10px;
+        padding-right: 9px;
+    }
+
+    .suscription-level-container-home {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
 
@@ -220,12 +325,41 @@ main {
 
     .offers-container-home {
         padding-left: 15px;
-        padding-right: 15px;
+        padding-right: 20px;
+    }
+
+    .suscription-level-container-home {
+        margin-left: 15px;
+        margin-right: 20px;
+    }
+
+    .content-suscription{
+        display: block;
+    }
+
+    .content-suscription > div{
+        padding: 10px 0;
+    }
+
+    .content-suscription > div > p{
+        padding-right: 45px;
     }
 }
 
 @media (max-width: 555px) {
     .info-pay-item p:nth-child(1) {
         line-height: 17px; 
+    }
+}
+
+@media (max-width: 445px) {
+    .header-pricing-suscription  {
+        margin-top: -10px;
+        margin-left: 80px;
+    }
+
+    .header-pricing-suscription h4 {
+        line-height: 15px;
+        margin-top: 13px;
     }
 }

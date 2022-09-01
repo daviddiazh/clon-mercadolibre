@@ -6,7 +6,7 @@ import { AiOutlineBank } from 'react-icons/ai';
 import { FaHandsHelping } from 'react-icons/fa';
 import { IoAddCircleSharp } from 'react-icons/io5';
 
-import { mockOffers } from '../api/mock-offers';
+import { mockOffers, mockSuscription } from '../api/';
 import { FcNext } from 'react-icons/fc';
 
 export const Home = () => {
@@ -14,7 +14,22 @@ export const Home = () => {
     const sliderImages = ['https://drive.google.com/uc?export=view&id=1u6KWKFUGMzuwTKJCom2koa1dUqXHIEJN', 'https://drive.google.com/uc?export=view&id=1K_-ZQVZiY2EFGPr8JAefNl-98KG7qh0s', 'https://drive.google.com/uc?export=view&id=1N0BroYVUbp8HIm4f9NS-8Dl-IpmhsNfq', 'https://drive.google.com/uc?export=view&id=1Y7UX5YgnjrPAktu8kitU8aYDfiVxovtU', 'https://drive.google.com/uc?export=view&id=1JRFTT_wtiwHlIzkUonbCzwdK4-MFjMJN', 'https://drive.google.com/uc?export=view&id=1Ubw3YdJ1JJZ8kquW637Eu01jgKOL0qTq', 'https://drive.google.com/uc?export=view&id=1Q5OhLmcQkmtZOk7bmsbcfZapWEihXgE2'];
 
 
-    console.log('mockOffers: ', mockOffers)
+    console.log('mockOffers: ', mockOffers);
+
+    // let recognition = new webkitSpeechRecognition();
+
+    // recognition.lang = 'es-ES';
+
+    // recognition.continuous = true;
+
+    // recognition.onresult = event => {
+    //     for( const result of event.results ){
+    //         console.log(result[0].transcrip)
+    //     }
+    // }
+
+    // recognition.start();
+
 
     return (
         <main>
@@ -80,6 +95,34 @@ export const Home = () => {
                     }
                 </div>
                 <button className="btn-next-offers"><FcNext /></button>
+            </div>
+
+            <div className="suscription-level-container-home">
+                <div className="header-suscription-level">
+                    <h3>Suscríbete al nivel 6</h3>
+                    <div className="header-pricing-suscription">
+                        <span><del>$50.690</del></span>
+                        <h4>$17.899 <span style={{ fontSize: 15 }}>/mes</span></h4>
+                    </div>
+                </div>
+
+                <div className="content-container-suscription">
+                    <p>Consigue los mejores beneficios en Mercado Libre y Mercado Pago</p>
+                    <div className="content-suscription">
+                        {
+                            mockSuscription?.map( content => (
+                                <div key={ content.id } style={{ display: 'flex', alignItems: 'center' }}>
+                                    <span><img src={ content.urlImage } width={ 45 } height={ 35 } alt={ content.description } /></span>
+                                    <p>{ content.description }</p>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+                <div style={{ borderBottom: '1px solid #ededed', width: '100%' }} />
+                <div style={{ display: 'flex', justifyContent: 'end' }}>
+                    <button className="btn-suscription">Suscríbete</button>
+                </div>
             </div>
             
             <br />
