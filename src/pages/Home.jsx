@@ -6,7 +6,7 @@ import { AiOutlineBank } from 'react-icons/ai';
 import { FaHandsHelping } from 'react-icons/fa';
 import { IoAddCircleSharp } from 'react-icons/io5';
 
-import { mockOffers, mockSuscription } from '../api/';
+import { mockOffers, mockSuscription, mockMarketingPoints } from '../api/';
 import { FcNext } from 'react-icons/fc';
 
 export const Home = () => {
@@ -132,7 +132,20 @@ export const Home = () => {
                 </div>
 
                 <div>
-                    
+                    {
+                        mockMarketingPoints?.map( content => (
+                            <div key={ content.id } style={{ backgroundImage: `url(${content.backgroundPhoto})`, backgroundRepeat: 'no-repeat' }}>
+                                <div>
+                                    <img src={ content.profilePhotoBrand } alt={ content.brandName } />
+                                </div>
+                                <div>
+                                    <span>{ content.freeDays }</span>
+                                    <h4>{ content.title }</h4>
+                                    <p>{ content.brandName }</p>
+                                </div>
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
             
