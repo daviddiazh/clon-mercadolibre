@@ -10,6 +10,7 @@ import meliLogoLarge from '../../assets/meli-large-logo.png';
 import disneyMeli from '../../assets/disney-meli.webp';
 import './header.css';
 import { IProduct } from '../../interfaces/Product';
+import { Link } from 'react-router-dom';
 
 export const Header: FC = () => {
 
@@ -70,7 +71,9 @@ export const Header: FC = () => {
                                     products && products?.results?.filter(producto => producto.title?.toLowerCase().includes(userInput.toLowerCase())).map( producto => (
                                         <div className="autocomplete-element">
                                             <span style={{ color: '#cecece', paddingRight: 10, paddingTop: 3 }}><FiSearch /></span>
-                                            <p>{producto?.title?.substring(0, 40) + '...'}</p>
+                                            <Link to={`/search/${ userInput }`}>
+                                                <p>{producto?.title?.substring(0, 40) + '...'}</p>
+                                            </Link>
                                         </div>
                                     ))
                                 }

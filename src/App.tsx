@@ -2,8 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Header } from './components/Header/Header';
 import { Home } from './pages/Home';
-
-//https://github.com/devjaime/clone-mercadolibre/blob/master/src/context/ProductosContext.js
+import { Search } from './pages/Search';
 
 const App = () => {
     return (
@@ -11,6 +10,7 @@ const App = () => {
             <Header />
             <Routes>
                 <Route path='/' element={ <Home /> } />
+                <Route path='/search/:searchId' element={ <Search /> } />
 
                 <Route path='/*' element={ <Home /> } />
             </Routes>
