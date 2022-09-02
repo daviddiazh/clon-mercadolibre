@@ -170,6 +170,7 @@ main {
     border-radius: 6px;
     background-color: #fff;
     margin-top: 70px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.2) 0px 1px 1px -1px;
 }
 
 .header-suscription-level {
@@ -279,9 +280,12 @@ main {
     color: #1259c3;
 }
 
-.container-cards-benefits {
-    
-}
+/* .container-cards-benefits {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+} */
 
 .card-benefit {
     width: 375px;
@@ -380,6 +384,7 @@ main {
         margin-left: 10px;
         margin-right: 10px;
     }
+ 
 }
 
 @media (max-width: 787px) {

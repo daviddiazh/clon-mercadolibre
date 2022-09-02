@@ -139,9 +139,9 @@ export const Home = () => {
                                     <img className="photo-brand-card" width={80} height={80} src={ content.profilePhotoBrand } alt={ content.brandName } />
                                 </div>
                                 <div className="content-card-benefit">
-                                    <span>{ content.freeDays }</span>
-                                    <h4>{ content.title }</h4>
-                                    <p>{ content.brandName }</p>
+                                    <span style={{ fontSize: 13, fontWeight: 700 }}>{ content.freeDays }</span>
+                                    <h4 style={{ fontSize: 20, fontWeight: 700 }}>{ content.title }</h4>
+                                    <p style={{ fontSize: 16, fontWeight: 500 }}>{ content.brandName }</p>
                                 </div>
                             </div>
                         ))
