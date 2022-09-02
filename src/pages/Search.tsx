@@ -1,6 +1,8 @@
 import { AiFillStar } from 'react-icons/ai';
 import { useLocation } from 'react-router-dom';
 import { useFetch } from '../hooks/useFetch';
+import { SidebarSearch } from '../components/SidebarSearch/SidebarSearch';
+import { Loading } from '../components/Loading/Loading';
 
 
 export const Search = () => {
@@ -20,25 +22,30 @@ export const Search = () => {
 
     return (
         <div>
-            {
-                data && data?.results?.map(product => (
-                    <div>
-                        <img src={ product?.thumbnail } alt="" />
-                        <p>{product?.title}</p>
-                        <p>${ product?.price }</p>
-                        <p>{ product?.shipping?.free_shipping ? 'Envío gratis' : null }</p>
+            <div>
+                <SidebarSearch />
+            </div>
+            <div>
+                {
+                    data && data?.results?.map(product => (
                         <div>
-                            {
-                                rate.map(item => (
-                                    <span style={{ color: "#2667ca" }}>
-                                        <AiFillStar />
-                                    </span>
-                                ))
-                            }
+                            <img src={ product?.thumbnail } alt="" />
+                            <p>{product?.title}</p>
+                            <p>${ product?.price }</p>
+                            <p>{ product?.shipping?.free_shipping ? 'Envío gratis' : null }</p>
+                            <div>
+                                {
+                                    rate.map(item => (
+                                        <span style={{ color: "#2667ca" }}>
+                                            <AiFillStar />
+                                        </span>
+                                    ))
+                                }
+                            </div>
                         </div>
-                    </div>
-                ))
-            }
+                    ))
+                }
+            </div>
         </div>
     )
 }
