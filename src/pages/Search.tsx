@@ -16,13 +16,13 @@ export const Search = () => {
 
     return (
         <div>
-            {/* {
-                data?.map(element => (
+            {
+                data && data?.results?.map(element => (
                     <div>
-                        <p>{element?.['results']}</p>
+                        <p>{element?.title}</p>
                     </div>
                 ))
-            } */}
+            }
         </div>
     )
 }

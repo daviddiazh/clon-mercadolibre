@@ -13,6 +13,8 @@ export interface IProduct {
 export interface Result {
     id?: string;
     title?: string;
+    price?: number;
+    condition?: string;
 }
 
 export interface Filters {
