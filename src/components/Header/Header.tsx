@@ -56,6 +56,7 @@ export const Header: FC = () => {
                                 <input 
                                     type="text" 
                                     name="search"
+                                    autoComplete='off'
                                     placeholder="Buscar productos, marcas y más..."
                                     className="input-header"
                                     onChange={onChangeInput}

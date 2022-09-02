@@ -125,20 +125,20 @@ export const Home = () => {
                 </div>
             </div>
             
-            <div>
+            <div className="benefits-points-container-home">
                 <div>
                     <h2>Beneficios de Mercado Puntos</h2>
                     <p>Ver todos los beneficios</p>
                 </div>
 
-                <div>
+                <div className="container-cards-benefits">
                     {
                         mockMarketingPoints?.map( content => (
-                            <div key={ content.id } style={{ backgroundImage: `url(${content.backgroundPhoto})`, backgroundRepeat: 'no-repeat' }}>
+                            <div key={ content.id } className="card-benefit" style={{ backgroundImage: `url(${content.backgroundPhoto})` }}>
                                 <div>
-                                    <img src={ content.profilePhotoBrand } alt={ content.brandName } />
+                                    <img className="photo-brand-card" width={80} height={80} src={ content.profilePhotoBrand } alt={ content.brandName } />
                                 </div>
-                                <div>
+                                <div className="content-card-benefit">
                                     <span>{ content.freeDays }</span>
                                     <h4>{ content.title }</h4>
                                     <p>{ content.brandName }</p>

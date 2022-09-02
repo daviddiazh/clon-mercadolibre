@@ -242,6 +242,72 @@ main {
 }
 
 
+.benefits-points-container-home {
+    max-width: 1090px;
+    margin: 0 auto;
+    margin-top: 40px;
+    position: relative; 
+}
+
+.benefits-points-container-home > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: -5px;
+}
+
+.benefits-points-container-home > div:nth-child(0) {
+    display: flex;
+    align-items: center;
+}
+
+.benefits-points-container-home > div > h2 {
+    font-weight: 300;
+    color: #666;
+    font-size: 1.8rem;
+    padding-left: 5px;
+}
+
+.benefits-points-container-home > div > p {
+    color: #2a70d9;
+    padding-left: 15px;
+    padding-top: 10px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.benefits-points-container-home > div > p:hover {
+    color: #1259c3;
+}
+
+.container-cards-benefits {
+    
+}
+
+.card-benefit {
+    width: 375px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 5px;
+    display: flex;
+    cursor: pointer;
+}
+
+.photo-brand-card {
+    position: absolute; 
+    bottom: 15px;
+    margin-left: 15px;
+    border-radius: 7px;
+}
+
+.content-card-benefit {
+    position: absolute; 
+    bottom: 10px;
+    margin-left: 105px;
+    line-height: 0;
+    color: #fff;
+}
+
 
 @media (max-width: 1055px) {
     .info-pay-item {
