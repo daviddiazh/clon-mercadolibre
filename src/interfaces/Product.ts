@@ -7,7 +7,7 @@ export interface IProduct {
     sort?: {},
     available_sorts?: [],
     filters?: Filters[],
-    available_filters?: []
+    available_filters?: Available_filters[]
 }
 
 export interface Result {
@@ -97,4 +97,18 @@ export interface Paging {
     primary_results?: number,
     offset?: number,
     limit?: number,
+}
+
+export interface Available_filters {
+    id?: string,
+    name?: string,
+    type?: string,
+    values?: values_available_filters[] | values_available_filters;
+}
+
+export interface values_available_filters {
+    id?: string,
+    name?: string,
+    type?: string,
+    results?: number,
 }

@@ -34,6 +34,7 @@ export const Header: FC = () => {
 
     const onSubmitSearch = (event: any) => {
         event?.preventDefault();
+
     }
 
     useEffect(() => {
@@ -41,15 +42,16 @@ export const Header: FC = () => {
 
     }, [userInput])
 
-    console.log('products: ', products)
     
     return (
         <>
             <Box className="main-header">
                 <nav className="header">
                     <Box className='header-1'>
-                        <img src={meliLogoLarge} className='logo-desktop' />
-                        <img src={meliLogo} className='logo-mobile' />
+                        <Link to='/'>
+                            <img src={meliLogoLarge} className='logo-desktop' />
+                            <img src={meliLogo} className='logo-mobile' />
+                        </Link>
 
                         <form className="search-header" onSubmit={ onSubmitSearch }>
                             <div style={{ display: 'flex', height: '100%' }}>
