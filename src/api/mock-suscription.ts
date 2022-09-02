@@ -2,7 +2,7 @@ export const mockSuscription = [
     {
         id: 1,
         description: 'Disney+ sin cargo',
-        urlImage: 'https://drive.google.com/uc?export=view&id=1dp4FCaxJ-Vo-sUu4Vz5PAWdIofhFXVHl'
+        urlImage: 'https://drive.google.com/uc?export=view&id=1Ghrc0unHZL0rGQPo5560QwlTcX3e-ycG'
     },
     {
         id: 2,

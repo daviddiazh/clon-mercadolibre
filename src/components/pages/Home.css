@@ -270,7 +270,7 @@ main {
 
 .benefits-points-container-home > div > p {
     color: #2a70d9;
-    padding-left: 15px;
+    padding-left: 20px;
     padding-top: 10px;
     font-size: 17px;
     cursor: pointer;
@@ -368,8 +368,18 @@ main {
     }
 
     .suscription-level-container-home {
-        margin-left: 7px;
+        margin-left: 12px;
         margin-right: 15px;
+    }
+
+    .benefits-points-container-home {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        margin: 10px 10px;
+    }
+
+    .container-cards-benefits {
+        width: 1000px;
     }
 }
 
@@ -384,7 +394,6 @@ main {
         margin-left: 10px;
         margin-right: 10px;
     }
- 
 }
 
 @media (max-width: 787px) {
@@ -424,6 +433,10 @@ main {
 
     .content-suscription > div > p{
         padding-right: 45px;
+    }
+
+    .benefits-points-container-home {
+        margin: 10px 15px;
     }
 }
 
