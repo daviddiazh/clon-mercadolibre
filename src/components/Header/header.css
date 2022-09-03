@@ -28,6 +28,7 @@ a:hover {
     height: 3.3rem;
     display: flex;
     align-items: center;
+    line-height: 5px;
 }
 
 .logo-desktop {
@@ -63,8 +64,10 @@ a:hover {
     align-items: center;
     display: flex;
     padding: 0 10px 0 10px;
+    border: none;
     border-left: 1px solid #cecece;
     color: rgb(173, 173, 173);
+    cursor: pointer;
 }
 
 .input-header {
@@ -228,6 +231,8 @@ a:hover {
         align-items: center;
         display: flex;
         padding: 0 0 0 10px;
+        cursor: pointer;
+        border: none;
         color: rgb(173, 173, 173);
     }
 

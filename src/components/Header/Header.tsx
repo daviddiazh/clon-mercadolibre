@@ -10,12 +10,14 @@ import meliLogoLarge from '../../assets/meli-large-logo.png';
 import disneyMeli from '../../assets/disney-meli.webp';
 import './header.css';
 import { IProduct } from '../../interfaces/Product';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const Header: FC = () => {
 
     const [ userInput, setUserInput ] = useState('');
     const [ products, setProducts ] = useState<IProduct>({});
+
+    const navigator = useNavigate();
 
     const onChangeInput = ({ target }: any) => {
 
@@ -35,6 +37,9 @@ export const Header: FC = () => {
     const onSubmitSearch = (event: any) => {
         event?.preventDefault();
 
+        if( userInput.length < 1 ) return;
+
+        navigator(`/search/${ userInput }`)
     }
 
     useEffect(() => {
@@ -55,7 +60,12 @@ export const Header: FC = () => {
 
                         <form className="search-header" onSubmit={ onSubmitSearch }>
                             <div style={{ display: 'flex', height: '100%' }}>
-                                <span className="search-icon-mobile"><AiOutlineSearch /></span>
+                                <button
+                                    type="submit"
+                                    className="search-icon-mobile"
+                                >
+                                    <AiOutlineSearch />
+                                </button>
                                 <input 
                                     type="text" 
                                     name="search"
@@ -65,7 +75,12 @@ export const Header: FC = () => {
                                     onChange={onChangeInput}
                                     value={userInput}
                                 />
-                                <span className="search-icon-desktop"><AiOutlineSearch /></span>
+                                <button 
+                                    type="submit" 
+                                    className="search-icon-desktop"
+                                >
+                                    <AiOutlineSearch />
+                                </button>
                             </div>
 
                             <div className="autocomplete">
