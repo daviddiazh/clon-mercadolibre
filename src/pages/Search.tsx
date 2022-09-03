@@ -19,9 +19,17 @@ export const Search = () => {
 
     console.log('data: ', data)
 
-    // useEffect(() => {
+    const changeTitlePage = () => {
+        const newTitle = `${locationSplit} | MercadoLibre📦`;
+
+        document.title = newTitle
+    }
+
+    useEffect(() => {
+
+        changeTitlePage();
         
-    // }, [ data, locationSplit ]);
+    }, [ data, locationSplit, location ]);
 
 
     if( isLoading ) return <Loading />

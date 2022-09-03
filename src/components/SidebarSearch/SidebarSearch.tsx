@@ -22,6 +22,23 @@ export const SidebarSearch = ({ locationSplit = '' }) => {
                     <div></div>
                 </div>
             </div>
+
+            <div className="filters-cards">
+                <div>
+                    <p>FULL <span>te ahorra envíos</span></p>
+                    <p>Con tu carrito de compras</p>
+                </div>
+                <div className="switch-filters-card">
+                    <div></div>
+                </div>
+            </div>
+
+            <div className="filters-cards">
+                <p>Envío gratis</p>
+                <div className="switch-filters-card">
+                    <div></div>
+                </div>
+            </div>
         </div>
     )
 }
