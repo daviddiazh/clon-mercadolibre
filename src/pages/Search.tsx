@@ -5,6 +5,7 @@ import { SidebarSearch } from '../components/SidebarSearch/SidebarSearch';
 import { Loading } from '../components/Loading/Loading';
 import '../components/pages/Search.css';
 import { useEffect } from 'react';
+import { BiChevronDown } from 'react-icons/bi';
 
 
 export const Search = () => {
@@ -12,7 +13,6 @@ export const Search = () => {
     const location = useLocation();
     const locationSplit = location.pathname.split('/search/')[1];
 
-    // let rate: number[] = [];
     const rate = Array.from({length: 5})
 
     const { data, isLoading, hasError } = useFetch(`https://api.mercadolibre.com/sites/MLC/search?q=${ locationSplit }&limit=30`);
@@ -20,7 +20,7 @@ export const Search = () => {
     console.log('data: ', data)
 
     const changeTitlePage = () => {
-        const newTitle = `${locationSplit} | MercadoLibre📦`;
+        const newTitle = `${locationSplit} | MercadoLibre 📦`;
 
         document.title = newTitle
     }
@@ -29,7 +29,7 @@ export const Search = () => {
 
         changeTitlePage();
         
-    }, [ data, locationSplit, location ]);
+    }, [ location.pathname ]);
 
 
     if( isLoading ) return <Loading />
@@ -37,9 +37,16 @@ export const Search = () => {
     return (
         <div className="general-container-search-page">
 
+            <div className="header-search-page">
+                <div></div>
+                <div>
+                    <p>Ordenar por <span>Más relevantes <BiChevronDown color='#3483fa' fontSize={23} /></span></p>
+                </div>
+            </div>
+
             <div className="container-sidebar-and-search">
                 <div className="container-sidebar">
-                    <SidebarSearch />
+                    <SidebarSearch data={data} isLoading={isLoading} />
                 </div>
                 <div className="container-search-page">
                     {

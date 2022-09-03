@@ -31,3 +31,12 @@
     width: 135px;
     height: 135px;
 }
+
+.header-search-page{
+    display: flex;
+    max-width: 1090px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0 10px 0;
+}

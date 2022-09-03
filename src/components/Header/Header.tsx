@@ -45,7 +45,7 @@ export const Header: FC = () => {
     useEffect(() => {
         fetchSearch();
 
-    }, [userInput])
+    }, [ userInput ]);
 
     
     return (
