@@ -1,0 +1,33 @@
+.general-container-search-page {
+    width: 100%;
+    display: block;
+    background-color: #ebebeb;
+}
+
+.container-sidebar-and-search {
+    max-width: 1090px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.container-sidebar {
+    width: 300px;
+    background-color: #ebebeb;
+}
+
+.container-search-page {
+    width: 790px;
+    background-color: #fff;
+    border-radius: 7px;
+}
+
+.one-product-list {
+    display: flex;
+    padding: 20px 50px;
+    border-bottom: 1px solid #ededed;
+}
+
+.photo-product {
+    width: 135px;
+    height: 135px;
+}
