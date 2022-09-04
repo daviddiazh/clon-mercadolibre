@@ -1,18 +1,28 @@
+import { useEffect } from 'react';
+import { mockOffers, mockSuscription, mockMarketingPoints } from '../api';
 import { Slider } from '../components/Slider/Slider';
 import '../components/pages/Home.css';
 
+import { FcNext } from 'react-icons/fc';
 import { BsCreditCard } from 'react-icons/bs';
 import { AiOutlineBank } from 'react-icons/ai';
 import { FaHandsHelping } from 'react-icons/fa';
 import { IoAddCircleSharp } from 'react-icons/io5';
 
-import { mockOffers, mockSuscription, mockMarketingPoints } from '../api';
-import { FcNext } from 'react-icons/fc';
-import { useEffect } from 'react';
+import slider1 from '../assets/sliders/slider1.webp';
+import slider2 from '../assets/sliders/slider2.webp';
+import slider3 from '../assets/sliders/slider3.webp';
+import slider4 from '../assets/sliders/slider4.webp';
+import slider5 from '../assets/sliders/slider5.webp';
+import slider6 from '../assets/sliders/slider6.webp';
+import slider7 from '../assets/sliders/slider7.webp';
+
 
 export const Home = () => {
 
-    const sliderImages = ['https://drive.google.com/uc?export=view&id=1u6KWKFUGMzuwTKJCom2koa1dUqXHIEJN', 'https://drive.google.com/uc?export=view&id=1K_-ZQVZiY2EFGPr8JAefNl-98KG7qh0s', 'https://drive.google.com/uc?export=view&id=1N0BroYVUbp8HIm4f9NS-8Dl-IpmhsNfq', 'https://drive.google.com/uc?export=view&id=1Y7UX5YgnjrPAktu8kitU8aYDfiVxovtU', 'https://drive.google.com/uc?export=view&id=1JRFTT_wtiwHlIzkUonbCzwdK4-MFjMJN', 'https://drive.google.com/uc?export=view&id=1Ubw3YdJ1JJZ8kquW637Eu01jgKOL0qTq', 'https://drive.google.com/uc?export=view&id=1Q5OhLmcQkmtZOk7bmsbcfZapWEihXgE2'];
+    // const sliderImages = ['https://drive.google.com/uc?export=view&id=1u6KWKFUGMzuwTKJCom2koa1dUqXHIEJN', 'https://drive.google.com/uc?export=view&id=1K_-ZQVZiY2EFGPr8JAefNl-98KG7qh0s', 'https://drive.google.com/uc?export=view&id=1N0BroYVUbp8HIm4f9NS-8Dl-IpmhsNfq', 'https://drive.google.com/uc?export=view&id=1Y7UX5YgnjrPAktu8kitU8aYDfiVxovtU', 'https://drive.google.com/uc?export=view&id=1JRFTT_wtiwHlIzkUonbCzwdK4-MFjMJN', 'https://drive.google.com/uc?export=view&id=1Ubw3YdJ1JJZ8kquW637Eu01jgKOL0qTq', 'https://drive.google.com/uc?export=view&id=1Q5OhLmcQkmtZOk7bmsbcfZapWEihXgE2'];
+
+    const sliderImages = [slider1, slider2, slider3, slider4, slider5, slider6, slider7]
 
     const changeTitlePage = () => {
         const newTitle = 'Mercado Libre Colombia';
