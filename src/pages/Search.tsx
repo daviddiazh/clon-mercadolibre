@@ -44,6 +44,15 @@ export const Search = () => {
                 </div>
             </div>
 
+            <div className="header-search-page-mobile">
+                <p style={{ marginBottom: '17px', fontSize: '1rem', marginRight: 25 }}>+{ data?.paging?.total } resultados</p>
+
+                <p>Llegan mañana</p>
+                <div className='switch-filter-search'>
+                    <div></div>
+                </div>
+            </div>
+
             <div className="container-sidebar-and-search">
                 <div className="container-sidebar">
                     <SidebarSearch data={data} isLoading={isLoading} />
