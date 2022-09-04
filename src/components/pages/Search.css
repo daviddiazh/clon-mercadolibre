@@ -60,6 +60,33 @@ a:hover {
     margin-top: -10px;
 }
 
+.title-one-product {
+    font-weight: 300; 
+    font-size: 1.3rem; 
+    margin-top: 3px;
+}
+
+.price-one-product {
+    font-weight: 500; 
+    font-size: 1.6rem;
+    margin-top: 15px; 
+    color: #000;
+}
+
+.available-product {
+    font-weight: 300; 
+    font-size: '0.7rem';
+    margin-top: 13px; 
+    color: #000;
+}
+
+.free-send {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 0px;
+    color: #00a650;
+}
+
 
 @media (max-width: 1110px) {
     .container-sidebar-and-search {
@@ -101,7 +128,20 @@ a:hover {
         height: 90px;
     }
 
+    .title-one-product {
+        font-size: 1rem; 
+    }
+
+    .price-one-product {
+        font-size: 1.3rem;
+        margin-top: -0px;
+    }
+
     .raiting-and-price {
         width: 250px;
+    }
+
+    .free-send {
+        margin-top: -5px;
     }
 }

@@ -57,10 +57,10 @@ export const Search = () => {
                                         <img className="photo-product" src={ product?.thumbnail } alt={ product?.title } />
                                     </div>
                                     <div style={{ paddingLeft: 15 }}>
-                                        <p style={{ fontWeight: 300, fontSize: '1.3rem', marginTop: '3px' }}>{product?.title}</p>
+                                        <p className="title-one-product">{product?.title}</p>
                                         <div className="raiting-and-price">
                                             <div>
-                                                <p style={{ fontWeight: 500, fontSize: '1.6rem', marginTop: '15px', color: '#000', }}>$ { product?.price }</p>
+                                                <p className="price-one-product">$ { product?.price }</p>
                                                 <p style={{ fontWeight: 400, fontSize: '0.9rem', marginTop: '-6px', color: '#000', }}>en 36x $ {`${
                                                     String(product?.price! / 36).split('.')[0]
                                                 }`}</p>
@@ -73,10 +73,10 @@ export const Search = () => {
                                                         </span>
                                                     ))
                                                 }
-                                                <p style={{ fontWeight: 300, fontSize: '0.7rem', marginTop: '13px', color: '#000', }}>Disponible</p>
+                                                <p className="available-product">Disponible</p>
                                             </div>
                                         </div>
-                                        <p style={{ fontWeight: 600, fontSize: '0.9rem', marginTop: '0px', color: '#00a650', }}>{ product?.shipping?.free_shipping ? 'Envío gratis' : null }</p>
+                                        <p className="free-send">{ product?.shipping?.free_shipping ? 'Envío gratis' : null }</p>
                                     </div>
                                 </div>
                             </Link>
