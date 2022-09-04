@@ -40,7 +40,7 @@ export const Search = () => {
             <div className="header-search-page">
                 <div></div>
                 <div>
-                    <p>Ordenar por <span>Más relevantes <BiChevronDown color='#3483fa' fontSize={23} /></span></p>
+                    <p style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>Ordenar por <BiChevronDown color='#3483fa' fontSize={23} /></p>
                 </div>
             </div>
 
@@ -58,7 +58,7 @@ export const Search = () => {
                                     </div>
                                     <div style={{ paddingLeft: 15 }}>
                                         <p style={{ fontWeight: 300, fontSize: '1.3rem', marginTop: '3px' }}>{product?.title}</p>
-                                        <div style={{ display: 'flex', alignItems: 'center', lineHeight: '5px', justifyContent: 'space-between', width: '350px', marginTop: '-10px' }}>
+                                        <div className="raiting-and-price">
                                             <div>
                                                 <p style={{ fontWeight: 500, fontSize: '1.6rem', marginTop: '15px', color: '#000', }}>$ { product?.price }</p>
                                                 <p style={{ fontWeight: 400, fontSize: '0.9rem', marginTop: '-6px', color: '#000', }}>en 36x $ {`${

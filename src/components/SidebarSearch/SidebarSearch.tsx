@@ -41,7 +41,7 @@ export const SidebarSearch = ({ data, isLoading }: any) => {
                 </div>
             </div>
 
-            <div style={{ marginTop: 40 }}>
+            <div style={{ marginTop: 40, paddingLeft: 10 }}>
                 {
                     data && data?.available_filters?.map((filter: any) => (
                         <div key={ filter?.id }>

@@ -13,6 +13,7 @@ export const ProductId = () => {
     const { data, isLoading, hasError } = useFetchByID(`https://api.mercadolibre.com/items/${ locationSplit }`);
 
     console.log('DATA BY PRODUCT ID: ', data);
+    console.log('title: ', data.title);
 
     const changeTitlePage = () => {
         const newTitle = `${data?.title} | Mercado Libre`;
@@ -24,7 +25,7 @@ export const ProductId = () => {
 
         changeTitlePage();
         
-    }, [ location.pathname ]);
+    });
 
 
     if( isLoading ) return <Loading />

@@ -89,7 +89,7 @@ export const Header: FC = () => {
                                         <div className="autocomplete-element">
                                             <span style={{ color: '#cecece', paddingRight: 10, paddingTop: 3 }}><FiSearch /></span>
                                             <Link to={`/search/${ userInput }`}>
-                                                <p>{producto?.title?.substring(0, 40) + '...'}</p>
+                                                <p className='text-autocomplete'>{producto?.title?.substring(0, 40) + '...'}</p>
                                             </Link>
                                         </div>
                                     ))
