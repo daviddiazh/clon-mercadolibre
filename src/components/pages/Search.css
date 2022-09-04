@@ -12,6 +12,7 @@ a:hover {
     width: 100%;
     display: block;
     background-color: #ebebeb;
+    padding-bottom: 60px;
 }
 
 .container-sidebar-and-search {
@@ -160,6 +161,7 @@ a:hover {
         background-color: #fff;
         border-bottom: 1px solid #cecece;
         margin-bottom: 2px;
+        padding-left: 20px;
     }
 
     .switch-filter-search {
