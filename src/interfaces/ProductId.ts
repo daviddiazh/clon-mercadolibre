@@ -13,7 +13,7 @@ export interface ProductId {
     initial_quantity?: number;
     available_quantity?: number;
     sold_quantity?: number;
-    sale_terms?: [];
+    sale_terms?: Sale_terms[];
     buying_mode?: string;
     listing_type_id?: string;
     start_time?: string;
@@ -96,4 +96,23 @@ export interface Attribute {
     values:               any[];
     attribute_group_id:   string;
     attribute_group_name: string;
+}
+
+export interface Sale_terms {
+    id?: string,
+    name?: string,
+    value_id?: string | number,
+    value_name?: string,
+    value_struct?: {
+        number?: number,
+        unit?: string,
+    },
+    values?: {
+        id?: string | number,
+        name?: string,
+        struct?: {
+            number?: number,
+            unit?: string,
+        }
+    }
 }
