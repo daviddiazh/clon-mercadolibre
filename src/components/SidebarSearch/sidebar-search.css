@@ -30,3 +30,52 @@
     border-radius: 100px;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
+
+.container-filters {
+    margin-bottom: 35px;
+}
+
+.title-filter {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.list-filter-options {
+    list-style: none;
+    margin: 10px 0;
+    margin-left: -40px;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: #666;
+    cursor: pointer;
+}
+
+.list-filter-options  li {
+    padding: 3px 0;
+}
+
+.min-max-filter {
+    display: flex;
+    margin-top: -10px;
+}
+
+.min-max-filter > input {
+    width: 90px;
+    padding: 5px;
+    border: 1px solid #cecece;
+    border-radius: 6px;
+}
+
+.min-max-filter > input:nth-child(2) {
+    margin-left: 10px;
+}
+
+.btn-filter-mm {
+    border: none;
+    color: #fff;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    padding:  0px 7px;
+    margin-left: 10px;
+}
