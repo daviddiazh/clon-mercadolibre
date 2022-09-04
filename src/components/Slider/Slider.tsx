@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FcNext, FcPrevious } from 'react-icons/fc';
 import './slider.css';
 
-export const Slider = ({ sliderImages }: any) => {
+export const Slider = ({ sliderImages = [''] }): JSX.Element | any => {
 
     const [ currentImage, setCurrentImage ] = useState(0);
 
