@@ -70,11 +70,11 @@ export const Search = () => {
                                         <div className="raiting-and-price">
                                             <div>
                                                 <p className="price-one-product">$ { product?.price }</p>
-                                                <p style={{ fontWeight: 400, fontSize: '0.9rem', marginTop: '-6px', color: '#000', }}>en 36x $ {`${
+                                                <p style={{ fontWeight: 400, fontSize: '0.9rem', marginTop: '-4px', color: '#000', }}>en 36x $ {`${
                                                     String(product?.price! / 36).split('.')[0]
                                                 }`}</p>
                                             </div>
-                                            <div style={{ paddingTop: '15px',}}>
+                                            <div className="raiting">
                                                 {
                                                     rate.map(item => (
                                                         <span style={{ color: "#3483fa" }}>
