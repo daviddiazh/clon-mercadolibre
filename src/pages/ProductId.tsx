@@ -46,7 +46,7 @@ export const ProductId = () => {
         <div>
             <p>{ data?.condition === 'new' ? 'Nuevo' : 'Reacondicionado' } | { data?.sold_quantity } vendidos</p>
             <h1>{ data?.title }</h1>
-            <del>$ { data?.original_price! > data?.price! ? data?.original_price : null }</del>
+            <del>{ data?.original_price! > data?.price! ? `$ ${data?.original_price}` : null }</del>
             <p>$ { data?.price }</p>
             <div>
                 {
@@ -56,6 +56,9 @@ export const ProductId = () => {
                         </span>
                     ))
                 }
+            </div>
+            <div>
+                <img src={data?.pictures?.[0].url} alt={data?.title} />
             </div>
         </div>
     )
