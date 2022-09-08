@@ -6,6 +6,7 @@ import { Loading } from '../components/Loading/Loading';
 import '../components/pages/Search.css';
 import { useEffect } from 'react';
 import { BiChevronDown } from 'react-icons/bi';
+import { IProduct } from '../interfaces/Product';
 
 
 export const Search = () => {
@@ -15,7 +16,7 @@ export const Search = () => {
 
     const rate = Array.from({length: 5})
 
-    const { data, isLoading, hasError } = useFetch(`https://api.mercadolibre.com/sites/MLC/search?q=${ locationSplit }&limit=30`);
+    const { data, isLoading, hasError } = useFetch<IProduct>(`https://api.mercadolibre.com/sites/MLC/search?q=${ locationSplit }&limit=30`);
 
     console.log('data: ', data)
 
@@ -59,7 +60,7 @@ export const Search = () => {
                 </div>
                 <div className="container-search-page">
                     {
-                        data && data?.results?.map(product => (
+                        data && data?.results?.map((product: any) => (
                             <Link to={`/product/${product?.id}`}>
                                 <div className="one-product-list">
                                     <div>

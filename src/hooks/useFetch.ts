@@ -1,16 +1,15 @@
 import { useState, useEffect } from 'react';
-import { IProduct } from '../interfaces/Product';
 
-interface IState {
-    data: IProduct,
+interface IState<T> {
+    data: T | undefined,
     isLoading: boolean,
     hasError: string | null,
 }
 
-export const useFetch = (url = '') => {
+export function useFetch<T> (url = ''){
 
-    const [ state, setState ] = useState<IState>({
-        data: {},
+    const [ state, setState ] = useState<IState<T>>({
+        data: undefined,
         isLoading: true,
         hasError: null
     });

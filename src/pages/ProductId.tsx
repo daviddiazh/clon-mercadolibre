@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Loading } from "../components/Loading/Loading";
-import { useFetchByID } from '../hooks/useFetchByID';
 import { AiFillStar } from 'react-icons/ai';
+import { useFetch } from '../hooks/useFetch';
+import { IProductId } from '../interfaces/ProductId';
 
 export const ProductId = () => {
 
@@ -18,14 +19,11 @@ export const ProductId = () => {
     const location = useLocation();
     const locationSplit = location.pathname.split('/product/')[1];
 
-    console.log( locationSplit )
-
-    const { data, isLoading, hasError } = useFetchByID(`https://api.mercadolibre.com/items/${ locationSplit }`);
+    const { data, isLoading, hasError } = useFetch<IProductId>(`https://api.mercadolibre.com/items/${ locationSplit }`);
 
     const rate = Array.from({length: 5})
 
     console.log('DATA BY PRODUCT ID: ', data);
-    console.log('title: ', data.title);
 
     const changeTitlePage = () => {
         const newTitle = `${data?.title} | Mercado Libre`;

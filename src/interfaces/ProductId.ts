@@ -1,4 +1,4 @@
-export interface ProductId {
+export interface IProductId {
     id?: string;
     site_id?: string;
     title?: string;
