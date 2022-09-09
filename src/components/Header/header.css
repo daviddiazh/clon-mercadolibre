@@ -57,8 +57,10 @@
     padding: 0 10px 0 10px;
     border: none;
     border-left: 1px solid #cecece;
-    color: rgb(173, 173, 173);
+    /* color: rgb(173, 173, 173); */
+    color: rgb(124, 124, 124);
     cursor: pointer;
+    font-size: 19px;
 }
 
 .input-header {
