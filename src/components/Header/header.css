@@ -202,8 +202,8 @@
 
     .logo-mobile {
         display: block;
-        width: 70px;
-        height: 70px;
+        width: 65px;
+        height: 65px;
     }
 
     .header-1 {
@@ -221,7 +221,7 @@
         border-radius: 1px;
         box-shadow: 0 1px 2px 0 rgba(0,0,0,.3);
         background-color: #fff;
-        margin-left: 10px;
+        margin-left: 0;
     }
 
     .search-icon-desktop {
@@ -234,15 +234,17 @@
         height: 100%;
         align-items: center;
         display: flex;
-        padding: 0 0 0 10px;
+        padding: 0 0 0 7px;
         cursor: pointer;
         border: none;
         color: rgb(173, 173, 173);
+        font-size: 18px;
     }
 
     .input-header {
         width: 100%;
         margin-left: 0px;
+        padding-left: 7px;
     }
 
     .img-disney-header {

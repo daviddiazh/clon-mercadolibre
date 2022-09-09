@@ -77,7 +77,7 @@ export const Header: FC = () => {
 
                             onBlur={(e) => {
                                 if (!e.currentTarget.contains(e.relatedTarget)) {
-                                  console.log('focus left self');
+                                //   console.log('focus left self');
                                   handleOnBlur();
                                 }
                             }}
