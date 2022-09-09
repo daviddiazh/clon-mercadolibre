@@ -18,7 +18,6 @@ export const Search = () => {
 
     const { data, isLoading, hasError } = useFetch<IProduct>(`https://api.mercadolibre.com/sites/MLC/search?q=${ locationSplit }&limit=30`);
 
-    console.log('data: ', data)
 
     const changeTitlePage = () => {
         const newTitle = `${locationSplit} | MercadoLibre 📦`;
@@ -61,7 +60,7 @@ export const Search = () => {
                 <div className="container-search-page">
                     {
                         data && data?.results?.map((product: any) => (
-                            <Link to={`/product/${product?.id}`}>
+                            <Link key={ product?.id } to={`/product/${product?.id}`}>
                                 <div className="one-product-list">
                                     <div>
                                         <img className="photo-product" src={ product?.thumbnail } alt={ product?.title } />
@@ -77,8 +76,8 @@ export const Search = () => {
                                             </div>
                                             <div className="raiting">
                                                 {
-                                                    rate.map(item => (
-                                                        <span style={{ color: "#3483fa" }}>
+                                                    rate.map((item, index) => (
+                                                        <span key={ index } style={{ color: "#3483fa" }}>
                                                             <AiFillStar />
                                                         </span>
                                                     ))

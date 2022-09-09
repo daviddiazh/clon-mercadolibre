@@ -88,13 +88,11 @@ export const Home = () => {
                 <div className="offers-container-cards">
                     {
                         mockOffers && mockOffers?.map( product => (
-                            <>
-                                <div className="offers-card-home" key={ product.id }>
-                                    <img src={ product.urlImage } alt={ product.description } />
-                                    <p className="card-text-pricing-off">$ { product.priceOff } <span className="card-text-off">{ product.off }% OFF</span></p>
-                                    <p style={{ fontSize: '0.9rem', paddingLeft: '0.9rem', fontWeight: 600, color: '#00a650', marginTop: '-20px' }}>{ product.freeSend ? 'Envío gratis' : null }</p>
-                                </div>
-                            </>
+                            <div className="offers-card-home" key={ product.id }>
+                                <img src={ product.urlImage } alt={ product.description } />
+                                <p className="card-text-pricing-off">$ { product.priceOff } <span className="card-text-off">{ product.off }% OFF</span></p>
+                                <p style={{ fontSize: '0.9rem', paddingLeft: '0.9rem', fontWeight: 600, color: '#00a650', marginTop: '-20px' }}>{ product.freeSend ? 'Envío gratis' : null }</p>
+                            </div>
                         ))
                     }
                 </div>

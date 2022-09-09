@@ -9,10 +9,6 @@ export const SidebarSearch = ({ data, isLoading }: any) => {
     const location = useLocation();
     const locationSplitt = location.pathname.split('/search/')[1];
 
-    console.log('DATA SIDEBAR: ', data)
-
-    console.log('data && data?.available_filters: ', data?.available_filters?.[0]?.values?.results)
-
     if( isLoading ) return <Loading />
 
     return (

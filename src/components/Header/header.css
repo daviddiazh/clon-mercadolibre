@@ -151,6 +151,10 @@
     line-height: 0.8;
 }
 
+.autocomplete-off {
+    display: none;
+}
+
 .autocomplete-element {
     padding: 0 15px;
     display: flex;

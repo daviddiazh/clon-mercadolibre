@@ -1,4 +1,6 @@
 import React, { FC, useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
+import { IProduct } from '../../interfaces/Product';
 import { Box } from '@mui/material';
 import { AiOutlineMenu, AiOutlineSearch, AiOutlineUser } from 'react-icons/ai';
 import { FiSearch, FiShoppingCart } from 'react-icons/fi';
@@ -9,13 +11,13 @@ import meliLogo from '../../assets/meli-logo.png';
 import meliLogoLarge from '../../assets/meli-large-logo.png';
 import disneyMeli from '../../assets/disney-meli.webp';
 import './header.css';
-import { IProduct } from '../../interfaces/Product';
-import { Link, useNavigate } from 'react-router-dom';
 
 export const Header: FC = () => {
 
     const [ userInput, setUserInput ] = useState('');
     const [ products, setProducts ] = useState<IProduct>({});
+    const [ focus, setFocus ] = useState<boolean>(false);
+    const [ blur, setBlur ] = useState<boolean>(false);
 
     const navigator = useNavigate();
 
@@ -30,7 +32,6 @@ export const Header: FC = () => {
         const resp = await fetch( url );
         const data = await resp.json();
 
-        console.log(data)
         return setProducts(data);
     }
 
@@ -42,12 +43,24 @@ export const Header: FC = () => {
         navigator(`/search/${ userInput }`)
     }
 
+    const handleOnFocus = () => {
+
+        setBlur(false);
+        setFocus(true);
+    }
+
+    const handleOnBlur = () => {
+        
+        setBlur(true);
+    }
+    
+
     useEffect(() => {
+
         fetchSearch();
 
     }, [ userInput ]);
 
-    
     return (
         <>
             <Box className="main-header">
@@ -58,7 +71,17 @@ export const Header: FC = () => {
                             <img src={meliLogo} className='logo-mobile' />
                         </Link>
 
-                        <form className="search-header" onSubmit={ onSubmitSearch }>
+                        <form 
+                            className="search-header"
+                            onSubmit={ onSubmitSearch } 
+
+                            onBlur={(e) => {
+                                if (!e.currentTarget.contains(e.relatedTarget)) {
+                                  console.log('focus left self');
+                                  handleOnBlur();
+                                }
+                            }}
+                        >
                             <div style={{ display: 'flex', height: '100%' }}>
                                 <button
                                     type="submit"
@@ -74,6 +97,7 @@ export const Header: FC = () => {
                                     className="input-header"
                                     onChange={onChangeInput}
                                     value={userInput}
+                                    onFocus={(e) => handleOnFocus() }
                                 />
                                 <button 
                                     type="submit" 
@@ -83,15 +107,15 @@ export const Header: FC = () => {
                                 </button>
                             </div>
 
-                            <div className="autocomplete">
+                            <div className={ blur === false && focus === true ? 'autocomplete' : 'autocomplete-off' }>
                                 {
                                     products && products?.results?.filter(producto => producto.title?.toLowerCase().includes(userInput.toLowerCase())).map( producto => (
-                                        <div className="autocomplete-element">
-                                            <span style={{ color: '#cecece', paddingRight: 10, paddingTop: 3 }}><FiSearch /></span>
-                                            <Link to={`/search/${ userInput }`}>
+                                        <Link key={ producto?.id } to={`/search/${ userInput }`}>
+                                            <div className="autocomplete-element">
+                                                <span style={{ color: '#cecece', paddingRight: 10, paddingTop: 3 }}><FiSearch /></span>
                                                 <p className='text-autocomplete'>{producto?.title?.substring(0, 40) + '...'}</p>
-                                            </Link>
-                                        </div>
+                                            </div>
+                                        </Link>
                                     ))
                                 }
 

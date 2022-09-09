@@ -40,18 +40,18 @@ export const Slider = ({ sliderImages = [''] }): JSX.Element | any => {
                 <button onClick={ onPreviousImage } className="btn-slider"><FcPrevious /></button>
                 {
                     sliderImages.map((image, index) => (
-                        <div>
+                        <div key={ index }>
                             {
                                 currentImage === index && (
-                                    <>
-                                        <img key={ index } src={ image } alt="Slider Image" className="slide" />
+                                    <div>
+                                        <img src={ image } alt="Slider Image" className="slide" />
                                         <div className="container-dots">
                                             {Array.from({length: sliderImages.length}).map((item, index) => (
-                                                <div onClick={ () => moveDot( index === sliderImages.length - 1 ? 0 : index + 1 ) } className={currentImage === index + 1 ? "dot active" : "dot"}
+                                                <div key={ index } onClick={ () => moveDot( index === sliderImages.length - 1 ? 0 : index + 1 ) } className={currentImage === index + 1 ? "dot active" : "dot"}
                                                 ></div>
                                             ))}
                                         </div>
-                                    </>
+                                    </div>
                                 )
                             }
                         </div>
