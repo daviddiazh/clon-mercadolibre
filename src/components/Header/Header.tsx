@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { IProduct } from '../../interfaces/Product';
 import { Box } from '@mui/material';
 import { AiOutlineMenu, AiOutlineSearch, AiOutlineUser } from 'react-icons/ai';
@@ -20,6 +20,7 @@ export const Header: FC = () => {
     const [ blur, setBlur ] = useState<boolean>(false);
 
     const navigator = useNavigate();
+    const location = useLocation();
 
     const onChangeInput = ({ target }: any) => {
 
@@ -53,20 +54,26 @@ export const Header: FC = () => {
         
         setBlur(true);
     }
+
+    const onClickLogo = () => {
+        setUserInput('');
+    }
     
 
     useEffect(() => {
 
         fetchSearch();
 
-    }, [ userInput ]);
+        window.scrollTo(0, 0);
+
+    }, [ userInput, location.pathname ]);
 
     return (
         <>
             <Box className="main-header">
                 <nav className="header">
                     <Box className='header-1'>
-                        <Link to='/'>
+                        <Link to='/' onClick={ onClickLogo }>
                             <img src={meliLogoLarge} className='logo-desktop' />
                             <img src={meliLogo} className='logo-mobile' />
                         </Link>
@@ -77,7 +84,6 @@ export const Header: FC = () => {
 
                             onBlur={(e) => {
                                 if (!e.currentTarget.contains(e.relatedTarget)) {
-                                //   console.log('focus left self');
                                   handleOnBlur();
                                 }
                             }}
@@ -159,7 +165,7 @@ export const Header: FC = () => {
                         </Box>
                     </Box>
 
-                    <Box className="header-3" paddingLeft={3}>
+                    <Box className="header-3" > 
                         <p style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>Categorias <BiChevronDown /></p>
                         <p>Ofertas</p>
                         <p>Historial</p>
@@ -174,8 +180,8 @@ export const Header: FC = () => {
                             <p style={{ paddingLeft: 2, display: 'flex', alignItems: 'center', cursor: 'pointer' }}>David <BiChevronDown /></p>
                         </Box>
                         <p>Mis compras</p>
-                        <span style={{ fontSize: 18, cursor: 'pointer', padding: '0 10px'}}><IoIosNotificationsOutline /></span>
-                        <span style={{ fontSize: 18, cursor: 'pointer'}}><FiShoppingCart /></span>
+                        <span style={{ fontSize: 15, cursor: 'pointer', padding: '0 10px'}}><IoIosNotificationsOutline /></span>
+                        <span style={{ fontSize: 15, cursor: 'pointer'}}><FiShoppingCart /></span>
                     </Box>
                 </Box>
             </Box>

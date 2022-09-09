@@ -142,7 +142,7 @@ export const Home = () => {
                                 </div>
                                 <div className="content-card-benefit">
                                     <span style={{ fontSize: 13, fontWeight: 700 }}>{ content.freeDays }</span>
-                                    <h4 style={{ fontSize: 20, fontWeight: 700 }}>{ content.title }</h4>
+                                    <h4 style={{ fontSize: 20, fontWeight: 700, width: '200px' }}>{ content.title }</h4>
                                     <p style={{ fontSize: 16, fontWeight: 500 }}>{ content.brandName }</p>
                                 </div>
                             </div>

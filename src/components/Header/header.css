@@ -120,6 +120,9 @@
 
 .header-3 {
     display: flex;
+
+    padding-right: 70px;
+    padding-left: 15px;
 }
 
 .header-3 p {
@@ -183,6 +186,13 @@
 @media (max-width: 1105px) {
     .search-header {
         width: 510px;
+    }
+
+    .header-3 {
+        display: flex;
+    
+        padding-right: 0px;
+        padding-left: 0px;
     }
 }
 

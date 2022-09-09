@@ -14,7 +14,7 @@ export const mockMarketingPoints = [
         profilePhotoBrand: profileBrandDisneyStar,
         // profilePhotoBrand: 'https://drive.google.com/uc?export=view&id=1M2jeNUiF4PlXHauwL1tveCW3u70kHRuW',
         freeDays: null,
-        title: 'Sin cargo con el nivel 6',
+        title: 'Sin cargo nivel 6',
         brandName: 'Disney+ y Star+',
     },
     {
