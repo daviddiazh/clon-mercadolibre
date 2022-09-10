@@ -9,11 +9,13 @@ export const SidebarSearch = ({ data, isLoading }: any) => {
     const location = useLocation();
     const locationSplitt = location.pathname.split('/search/')[1];
 
+    const contentSearch = locationSplitt.charAt(0).toUpperCase() + locationSplitt.slice(1).replace('%20', ' ');
+    
     if( isLoading ) return <Loading />
 
     return (
         <div className="container-sidebar-search">
-            <h4 style={{ marginTop: '0px', fontSize: '1.5rem' }}>{ locationSplitt }</h4>
+            <h4 style={{ marginTop: '0px', fontSize: '1.5rem' }}>{ contentSearch }</h4>
             <p style={{ marginTop: '-33px', marginBottom: '30px', fontWeight: 300, fontSize: '0.9rem' }}>{ data.paging.total } resultados</p>
             
             <div className="filters-cards">

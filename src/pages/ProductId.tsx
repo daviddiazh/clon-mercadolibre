@@ -1,9 +1,14 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import { Loading } from "../components/Loading/Loading";
-import { AiFillStar } from 'react-icons/ai';
 import { useFetch } from '../hooks/useFetch';
 import { IProductId } from '../interfaces/ProductId';
+import { useLocation } from "react-router-dom";
+import { Loading } from "../components/Loading/Loading";
+
+import visa from '../assets/logos-credit-cards/visa.png';
+import mcard from '../assets/logos-credit-cards/mcard.png';
+import amexpress from '../assets/logos-credit-cards/amexpress.jpg';
+
+import '../components/pages/ProductId.css'
 
 export const ProductId = () => {
 
@@ -20,8 +25,6 @@ export const ProductId = () => {
     const locationSplit = location.pathname.split('/product/')[1];
 
     const { data, isLoading, hasError } = useFetch<IProductId>(`https://api.mercadolibre.com/items/${ locationSplit }`);
-
-    const rate = Array.from({length: 5})
 
     console.log('DATA BY PRODUCT ID: ', data);
 
@@ -41,22 +44,36 @@ export const ProductId = () => {
     if( isLoading ) return <Loading />
 
     return (
-        <div>
-            <p>{ data?.condition === 'new' ? 'Nuevo' : 'Reacondicionado' } | { data?.sold_quantity } vendidos</p>
-            <h1>{ data?.title }</h1>
-            <del>{ data?.original_price! > data?.price! ? `$ ${data?.original_price}` : null }</del>
-            <p>$ { data?.price }</p>
-            <div>
-                {
-                    rate.map(item => (
-                        <span style={{ color: "#3483fa" }}>
-                            <AiFillStar />
-                        </span>
-                    ))
-                }
-            </div>
-            <div>
-                <img src={data?.pictures?.[0].url} alt={data?.title} />
+        <div className="general-container-productId">
+            <div className="product-container">
+
+                <div className="product-header">
+                    <p>Volver al listado</p>
+                    <div className="share-and-seller">
+                        <p>Compartir</p>
+                        <p>Vender uno igual</p>
+                    </div>
+                </div>
+
+                <div className="product-content">
+                    <div className="product-image">
+                        <img src={data?.pictures?.[0].url} alt={data?.title} />
+                    </div>
+                    <div className="product-info">
+                        <p className="condition-product">{ data?.condition === 'new' ? 'Nuevo' : 'Reacondicionado' } | { data?.sold_quantity } vendidos</p>
+                        <h1 className="title-product">{ data?.title?.substring(0, 50) }</h1>
+                        <del>{ data?.original_price! > data?.price! ? `$ ${data?.original_price}` : null }</del>
+                        <p>$ { data?.price }</p>
+                        <p>Hasta 48 cuotas</p>
+                        <div className="logos-credit-cards">
+                            <img className="logo-visa" src={visa} alt="Visa" />
+                            <img className="logo-amexpress" src={amexpress} alt="American Express" />
+                            <img className="logo-mcard" src={mcard} alt="Master Card" />
+                        </div>
+                        <p>Más información</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     )
