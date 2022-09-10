@@ -26,13 +26,13 @@ export const DetailsProductId: FC = () => {
 
 
     const onLikeProduct = () => {
-        
         setLike(true);
+        localStorage.setItem('likeProduct', 'true');
     }
 
     const onDislikeProduct = () => {
-
         setLike(false);
+        localStorage.setItem('likeProduct', 'false');
     }
 
     return (
@@ -41,7 +41,7 @@ export const DetailsProductId: FC = () => {
                 <p className="condition-product">{ data?.condition === 'new' ? 'Nuevo' : 'Reacondicionado' } | { data?.sold_quantity } vendidos</p>
                 <div className="container-title">
                     <h1 className="title-product">{ data?.title?.substring(0, 50) }</h1>
-                    <span style={{ color: '#2a70d9', fontSize: 23, cursor: 'pointer' }}>{like ? <MdFavorite onClick={ onDislikeProduct } /> : <MdOutlineFavoriteBorder onClick={ onLikeProduct } />}</span>
+                    <span style={{ color: '#2a70d9', fontSize: 23, cursor: 'pointer' }}>{like || localStorage.getItem('likeProduct') == 'true' ? <MdFavorite onClick={ onDislikeProduct } /> : <MdOutlineFavoriteBorder onClick={ onLikeProduct } />}</span>
                 </div>
                 <del>{ data?.original_price! > data?.price! ? `$ ${data?.original_price}` : null }</del>
                 <p className="price-product">$ { data?.price }</p>
