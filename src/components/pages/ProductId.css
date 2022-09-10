@@ -52,14 +52,6 @@
     margin: 0 auto;
 }
 
-.seller-post {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    margin-top: 45px;
-    width: 700px;
-    margin-left: 10px;
-    margin-right: 20px;
-}
-
 .product-image {
     max-width: 700px;
     margin: 0 auto;
@@ -67,3 +59,11 @@
     justify-content: center;
 }
 
+.seller-post {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 45px;
+    padding-top: 25px;
+    width: 700px;
+    margin-left: 10px;
+    margin-right: 20px;
+}

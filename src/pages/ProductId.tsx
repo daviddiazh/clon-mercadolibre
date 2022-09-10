@@ -59,7 +59,7 @@ export const ProductId = () => {
                         <div className="seller-post">
                             <h2>Publicaciones del vendedor</h2>
 
-                            
+
                         </div>
                     </div>
 
