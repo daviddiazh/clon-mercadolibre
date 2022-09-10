@@ -48,148 +48,22 @@
 }
 
 .product-data {
+    display: block;
+    margin: 0 auto;
+}
+
+.seller-post {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 45px;
+    width: 700px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.product-image {
     max-width: 700px;
     margin: 0 auto;
-    /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
-}
-
-.product-info {
-    max-width: 330px;
-    border-radius: 8px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 15px;
-}
-
-.condition-product {
-    color: #666;
-    font-size: 14px;
-    padding-top: 0px;
-}
-
-.title-product {
-    font-size: 20px;
-    line-height: 25px;
-}
-
-.price-product {
-    font-size: 38px;
-    line-height: 1px;
-    font-weight: 300;
-    padding: 5px 0 9px 0;
-}
-
-.logos-credit-cards {
     display: flex;
+    justify-content: center;
 }
 
-.logo-amexpress, .logo-mcard {
-    width: 40px;
-    height: 24px;
-    padding: 0 3px;
-}
-
-.logo-visa {
-    width: 50px;
-}
-
-.more-info {
-    color: #2a70d9;
-    margin: 5px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-.more-info:hover {
-    color: #1259c3;
-}
-
-.deliver-info {
-    display: flex;
-    align-items: center;
-    color: #00a650;
-    font-size: 16px;
-    margin-top: -5px;
-}
-
-.deliver-info span {
-    padding-right: 8px;
-    font-size: 23px;
-    padding-top: 5px;
-}
-
-.others-forms-receive {
-    color: #2a70d9;
-    font-size: 13.5px;
-    padding-left: 32px;
-    margin-top: -17px;
-    cursor: pointer;
-}
-
-.return-free {
-    display: flex;
-    align-items: center;
-    color: #00a650;
-    font-size: 16px;
-    margin-top: -12px;
-}
-
-.return-free span {
-    padding-right: 8px;
-    font-size: 23px;
-    padding-top: 5px;
-}
-
-.return-deliver {
-    font-size: 14px;
-    font-weight: 300;
-    margin-top: -15px;
-    padding-left: 32px;
-}
-
-.more-info-two {
-    color: #2a70d9;
-    margin: 5px;
-    font-size: 14px;
-    margin-top: -12px;
-    padding-left: 30px;
-    cursor: pointer;
-}
-
-.more-info-two:hover {
-    color: #1259c3;
-}
-
-.quantity {
-    color: #2a70d9;
-    font-size: 20px;
-}
-
-.btn-buy-now {
-    width: 100%;
-    height: 45px;
-    border: none;
-    background-color: #3483fa;
-    color: #fff;
-    font-weight: 600;
-    font-size: 15px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 15px;
-}
-
-.btn-buy-now:hover {
-    background-color: #1259c3;
-}
-
-.btn-add-to-cart {
-    width: 100%;
-    height: 45px;
-    border: none;
-    background-color: rgba(65,137,230,.15);
-    color: #3483fa;
-    font-weight: 600;
-    font-size: 15px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 10px;
-}
