@@ -7,6 +7,9 @@ import visa from '../../assets/logos-credit-cards/visa.png';
 import mcard from '../../assets/logos-credit-cards/mcard.png';
 import amexpress from '../../assets/logos-credit-cards/amexpress.jpg';
 
+import goodSAC from '../../assets/qualify-shops/message-positive.svg';
+import goodDeliverTime from '../../assets/qualify-shops/time-positive.svg';
+
 import { TbAward, TbTruckDelivery } from 'react-icons/tb';
 import { IoReturnDownBackOutline, IoShieldCheckmarkOutline } from 'react-icons/io5';
 import { BiChevronDown, BiMedal } from "react-icons/bi";
@@ -118,7 +121,7 @@ export const DetailsProductId: FC = () => {
                         <FcBusinessman />
                     </span>
                     <div className="seller-title">
-                        <p>{ seller?.nickname }</p>
+                        <p>{ seller?.nickname ? seller?.nickname : 'Mercado Libre' }</p>
                         <p>Tienda oficial de Mercado Libre</p>
                     </div>
                 </div>
@@ -133,9 +136,30 @@ export const DetailsProductId: FC = () => {
                     </div>
                 </div>
 
-                <div>
-                    
+                <div className="container-qualities">
+                    <div className="quality-one"></div>
+                    <div className="quality-two"></div>
+                    <div className="quality-three"></div>
+                    <div className="quality-four"></div>
+                    <div className="quality-five"></div>
                 </div>
+
+                <div className="reputation-shops">
+                    <div>
+                        <h3>{ seller?.seller_reputation?.transactions?.completed }</h3>
+                        <p>Ventas en los últimos 365 días</p>
+                    </div>
+                    <div>
+                        <img width={30} src={ goodSAC } alt="Good customer service" />
+                        <p>Brinda buena atención</p>
+                    </div>
+                    <div>
+                        <img width={30} src={ goodDeliverTime } alt="Good deliver time" />
+                        <p>Entrega sus productos a tiempo</p>
+                    </div>
+                </div>
+
+                <p className="more-info-seller" style={{ fontSize: '14px', fontWeight: 500 }}>Ver más datos de este vendedor</p>
             </div>
         </div>
     )

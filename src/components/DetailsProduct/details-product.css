@@ -212,16 +212,91 @@
 }
 
 .seller-title {
-    line-height: 5px;
+    line-height: 0px;
 }
 
 .seller-title p:nth-child(1) {
     font-size: 14px;
     font-weight: 500;
+    line-height: 18px;
 }
 
 .seller-title p:nth-child(2) {
     font-size: 13px;
     color: #666;
     font-weight: 400;
+}
+
+
+.container-qualities {
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    margin-top: 10px;
+}
+
+.quality-one {
+    background-color: #fff0f0;;
+    width: 18%;
+    height: 7px;
+    margin-right: 5px;
+}
+
+.quality-two {
+    background-color: #fff5e8;
+    width: 18%;
+    height: 7px;
+    margin-right: 5px;
+}
+
+.quality-three {
+    background-color: #fffcda;
+    width: 18%;
+    height: 7px;
+    margin-right: 5px;
+}
+
+.quality-four {
+    background-color: #f1fdd7;
+    width: 18%;;
+    height: 7px;
+    margin-right: 5px;
+}
+
+.quality-five {
+    background-color: #39b54a;
+    width: 18%;
+    height: 10px;
+}
+
+.reputation-shops {
+    display: flex;
+    align-items: center;
+}
+
+.reputation-shops div {
+    text-align: center;
+    padding: 0 3px;
+}
+
+.reputation-shops > div > img {
+    margin-top: 30px;
+}
+
+.reputation-shops > div > h3 {
+    margin-top: 32px;
+    margin-bottom: 5px;
+}
+
+.reputation-shops > div > p {
+    font-size: 11px;
+    line-height: 15px;
+    margin-top: 3px;
+}
+
+.more-info-seller {
+    padding: 0 5px;
+    color: #2a70d9;
+    cursor: pointer;
+    margin: 20px 0 10px;
 }
