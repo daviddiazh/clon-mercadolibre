@@ -15,6 +15,7 @@ import { MdFavorite, MdOutlineFavoriteBorder } from "react-icons/md";
 import './details-product.css';
 import { AiOutlineTrophy } from 'react-icons/ai';
 import { FcBusinessman } from 'react-icons/fc';
+import { ISellerId } from '../../interfaces/SellerId';
 
 export const DetailsProductId: FC = () => {
 
@@ -25,6 +26,8 @@ export const DetailsProductId: FC = () => {
 
     const { data } = useFetch<IProductId>(`https://api.mercadolibre.com/items/${ locationSplit }`);
 
+    const { data: seller } = useFetch<ISellerId>(`https://api.mercadolibre.com/users/${ data?.seller_id }`);
+    console.log('user: ', seller)
 
     const onLikeProduct = () => {
         setLike(true);
@@ -115,7 +118,7 @@ export const DetailsProductId: FC = () => {
                         <FcBusinessman />
                     </span>
                     <div className="seller-title">
-                        <p>NOMBRE TIENDA</p>
+                        <p>{ seller?.nickname }</p>
                         <p>Tienda oficial de Mercado Libre</p>
                     </div>
                 </div>
@@ -128,6 +131,10 @@ export const DetailsProductId: FC = () => {
                         <p style={{ color: '#00a650', fontWeight: 500, fontSize: 16}}>MercadoLíder Platinum</p>
                         <p style={{ color: '#666', fontWeight: 300, fontSize: 14, marginTop: -18, marginLeft: -1}}>¡Es uno de los mejores del sitio!</p>
                     </div>
+                </div>
+
+                <div>
+                    
                 </div>
             </div>
         </div>

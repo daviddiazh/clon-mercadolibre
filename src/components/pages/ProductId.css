@@ -73,3 +73,49 @@
 .description-product p {
     padding-right: 15px;
 }
+
+
+.questions-container {
+    padding: 25px 15px;
+}
+
+.btn-general-questions {
+    padding: 8px 15px;
+    margin: 0 5px;
+    border: none;
+    background-color: rgba(65,137,230,.15);
+    color: #3483fa;
+    font-weight: 800;
+    font-size: 13px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.questions-container > h4 {
+    margin-top: 40px;
+}
+
+.question-box {
+    display: flex;
+}
+
+.question-box input {
+    width: 77%;
+    padding: 15px;
+    border-radius: 7px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: #666;
+    font-size: 15px;
+}
+
+.question-box button {
+    padding: 0 30px;
+    border: none;
+    background-color: #3483fa;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 15px;
+}

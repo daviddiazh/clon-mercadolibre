@@ -152,6 +152,7 @@
     padding: 0 15px;
     box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.2);
     margin-top: 25px;
+    border-radius: 7px;
 }
 
 .icon-alert-buy {

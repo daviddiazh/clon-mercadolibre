@@ -61,12 +61,41 @@ export const ProductId = () => {
                             <h2>Descripción</h2>
                             <p>{ description?.plain_text }</p>
                         </div>
+
+                        <div className="questions-container">
+                            <h2>Preguntas y respuestas</h2>
+                            <h4>¿Qué quieres saber?</h4>
+
+                            <div style={{ marginLeft: '-5px' }}>
+                                <button className="btn-general-questions">Costo y tiempo de envío</button>
+                                <button className="btn-general-questions">Devoluciones gratis</button>
+                                <button className="btn-general-questions">Medios de pago</button>
+                                <button className="btn-general-questions">Gatantía</button>
+                            </div>
+
+                            <h4>Pregúntale al vendedor</h4>
+                            <div className="question-box">
+                                <input 
+                                    type="text" 
+                                    placeholder="Escribe tu pregunta..."
+                                />
+                                <button>Preguntar</button>
+                            </div>
+                        </div>
+
                     </div>
 
                     <DetailsProductId />
                 </div>
 
             </div>
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
         </div>
     )
 }
