@@ -23,7 +23,7 @@ export const DetailsProductId: FC = () => {
     const location = useLocation();
     const locationSplit = location.pathname.split('/product/')[1];
 
-    const { data, isLoading, hasError } = useFetch<IProductId>(`https://api.mercadolibre.com/items/${ locationSplit }`);
+    const { data } = useFetch<IProductId>(`https://api.mercadolibre.com/items/${ locationSplit }`);
 
 
     const onLikeProduct = () => {
