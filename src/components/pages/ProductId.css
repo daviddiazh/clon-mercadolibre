@@ -45,6 +45,8 @@
     background-color: #fff;
     display: flex;
     padding: 15px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .product-data {
@@ -118,4 +120,46 @@
     border-radius: 6px;
     cursor: pointer;
     margin-left: 15px;
+}
+
+.without-questions {
+    text-align: center;
+    line-height: 7px;
+    margin: 50px 0;
+}
+
+.without-questions p:nth-child(1) {
+    font-weight: 600;
+    color: #666;
+    font-size: 15px;
+}
+
+.without-questions p:nth-child(2) {
+    font-weight: 400;
+    color: #666;
+    font-size: 13px;
+}
+
+
+.post-report {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.post-report p {
+    font-size: 14px;
+}
+
+.post-report > p > span {
+    font-size: 15px;
+    font-weight: 600;
+    padding-right: 10px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.post-report p:nth-child(2) {
+    font-size: 14px;
+    padding-left: 10px;
+    color: #2a70d9;
+    cursor: pointer;
 }

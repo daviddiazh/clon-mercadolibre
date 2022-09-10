@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useFetch } from '../hooks/useFetch';
 import { IProductId } from '../interfaces/ProductId';
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Loading } from "../components/Loading/Loading";
 
 import '../components/pages/ProductId.css';
@@ -20,6 +20,7 @@ export const ProductId = () => {
     **/
 
     const location = useLocation();
+    const navigate = useNavigate();
     const locationSplit = location.pathname.split('/product/')[1];
 
     const { data, isLoading, hasError } = useFetch<IProductId>(`https://api.mercadolibre.com/items/${ locationSplit }`);
@@ -46,7 +47,7 @@ export const ProductId = () => {
             <div className="product-container">
 
                 <div className="product-header">
-                    <p>Volver al listado</p>
+                    <p onClick={ () => navigate(-1) }>Volver al listado</p>
                     <div className="share-and-seller">
                         <p>Compartir</p>
                         <p>Vender uno igual</p>
@@ -81,6 +82,11 @@ export const ProductId = () => {
                                 />
                                 <button>Preguntar</button>
                             </div>
+
+                            <div className="without-questions">
+                                <p>Nadie hizo preguntas todavía.</p>
+                                <p>¡Haz la primera!</p>
+                            </div>
                         </div>
 
                     </div>
@@ -88,10 +94,13 @@ export const ProductId = () => {
                     <DetailsProductId />
                 </div>
 
+                <div className="post-report">
+                    <p>Publicación <span>#{data?.id}</span></p>
+                    <p>Denunciar</p>
+                </div>
+
             </div>
 
-            <br />
-            <br />
             <br />
             <br />
             <br />
