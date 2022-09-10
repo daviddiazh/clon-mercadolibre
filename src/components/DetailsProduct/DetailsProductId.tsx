@@ -9,11 +9,12 @@ import amexpress from '../../assets/logos-credit-cards/amexpress.jpg';
 
 import { TbAward, TbTruckDelivery } from 'react-icons/tb';
 import { IoReturnDownBackOutline, IoShieldCheckmarkOutline } from 'react-icons/io5';
-import { BiChevronDown } from "react-icons/bi";
+import { BiChevronDown, BiMedal } from "react-icons/bi";
 import { MdFavorite, MdOutlineFavoriteBorder } from "react-icons/md";
 
 import './details-product.css';
 import { AiOutlineTrophy } from 'react-icons/ai';
+import { FcBusinessman } from 'react-icons/fc';
 
 export const DetailsProductId: FC = () => {
 
@@ -103,6 +104,30 @@ export const DetailsProductId: FC = () => {
                         <TbAward />
                     </span>
                     <p style={{ color: '#000', fontWeight: 300, marginBottom: 35, fontSize: '14px', marginTop: '17px' }}>30 días de garantía de fábrica.</p>
+                </div>
+            </div>
+
+            <div className="seller-info">
+                <p>Información sobre el vendedor</p>
+
+                <div className="seller-name-container">
+                    <span className="seller-icon">
+                        <FcBusinessman />
+                    </span>
+                    <div className="seller-title">
+                        <p>NOMBRE TIENDA</p>
+                        <p>Tienda oficial de Mercado Libre</p>
+                    </div>
+                </div>
+
+                <div style={{ display: 'flex' }}>
+                    <span style={{ color: '#00a650', marginTop: 18 }}>
+                        <BiMedal />
+                    </span>
+                    <div>
+                        <p style={{ color: '#00a650', fontWeight: 500, fontSize: 16}}>MercadoLíder Platinum</p>
+                        <p style={{ color: '#666', fontWeight: 300, fontSize: 14, marginTop: -18, marginLeft: -1}}>¡Es uno de los mejores del sitio!</p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -179,5 +179,48 @@
     display: flex;
     margin-top: 15px;
     margin-bottom: -25px;
-    /* align-items: center; */
+}
+
+
+.seller-info {
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.seller-info p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.seller-name-container {
+    display: flex;
+    align-items: center;
+}
+
+.seller-icon {
+    font-size: 30px;
+    height: 48px;
+    padding: 8px 7px;
+    background-color: rgba(145, 143, 143, 0.1);
+    border-radius: 7px;
+    color: #000;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.seller-title {
+    line-height: 5px;
+}
+
+.seller-title p:nth-child(1) {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.seller-title p:nth-child(2) {
+    font-size: 13px;
+    color: #666;
+    font-weight: 400;
 }

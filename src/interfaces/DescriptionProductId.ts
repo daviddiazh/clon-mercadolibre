@@ -1,4 +1,4 @@
-export interface DescriptionProductId {
+export interface IDescriptionProductId {
     text?: string,
     plain_text?: string,
     last_updated?: string,

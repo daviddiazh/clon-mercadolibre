@@ -6,6 +6,7 @@ import { Loading } from "../components/Loading/Loading";
 
 import '../components/pages/ProductId.css';
 import { DetailsProductId } from "../components/DetailsProduct/DetailsProductId";
+import { IDescriptionProductId } from '../interfaces/DescriptionProductId';
 
 export const ProductId = () => {
 
@@ -23,7 +24,7 @@ export const ProductId = () => {
 
     const { data, isLoading, hasError } = useFetch<IProductId>(`https://api.mercadolibre.com/items/${ locationSplit }`);
 
-    console.log('DATA BY PRODUCT ID: ', data);
+    const { data: description } = useFetch<IDescriptionProductId>(`https://api.mercadolibre.com/items/${ locationSplit }/description`);
 
     const changeTitlePage = () => {
         const newTitle = `${data?.title} | Mercado Libre`;
@@ -56,10 +57,9 @@ export const ProductId = () => {
                     <div className="product-data">
                         <img className="product-image" src={data?.pictures?.[0].url} alt={data?.title} />
 
-                        <div className="seller-post">
-                            <h2>Publicaciones del vendedor</h2>
-
-
+                        <div className="description-product">
+                            <h2>Descripción</h2>
+                            <p>{ description?.plain_text }</p>
                         </div>
                     </div>
 

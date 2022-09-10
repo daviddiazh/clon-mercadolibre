@@ -59,11 +59,17 @@
     justify-content: center;
 }
 
-.seller-post {
+.description-product {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     margin-top: 45px;
     padding-top: 25px;
     width: 700px;
     margin-left: 10px;
     margin-right: 20px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.description-product p {
+    padding-right: 15px;
 }
