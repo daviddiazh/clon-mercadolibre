@@ -151,11 +151,6 @@ export const Home = () => {
                 </div>
             </div>
 
-            
-            <br />
-            <br />
-            <br />
-            <br />
         </main>
     )
 }

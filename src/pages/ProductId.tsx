@@ -100,10 +100,6 @@ export const ProductId = () => {
 
                 </div>
 
-                <br />
-                <br />
-                <br />
-                <br />
             </div>
 
             <ProductIdMobile />
