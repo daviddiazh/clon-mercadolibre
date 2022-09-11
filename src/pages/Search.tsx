@@ -16,7 +16,7 @@ export const Search = () => {
 
     const rate = Array.from({length: 5})
 
-    const { data, isLoading, hasError } = useFetch<IProduct>(`https://api.mercadolibre.com/sites/MLC/search?q=${ locationSplit }&limit=30`);
+    const { data, isLoading } = useFetch<IProduct>(`https://api.mercadolibre.com/sites/MLC/search?q=${ locationSplit }&limit=30`);
 
 
     const changeTitlePage = () => {

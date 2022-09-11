@@ -18,7 +18,6 @@ export const Slider = ({ sliderImages = [''] }): JSX.Element | any => {
 
     const moveDot = (index: any) => {
         
-        console.log('index: ', index)
         setCurrentImage(index)
     }
 

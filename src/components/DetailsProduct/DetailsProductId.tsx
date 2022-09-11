@@ -31,7 +31,6 @@ export const DetailsProductId: FC = () => {
     const { data } = useFetch<IProductId>(`https://api.mercadolibre.com/items/${ locationSplit }`);
 
     const { data: seller } = useFetch<ISellerId>(`https://api.mercadolibre.com/users/${ data?.seller_id }`);
-    console.log('user: ', seller)
 
     const onLikeProduct = () => {
         setLike(true);

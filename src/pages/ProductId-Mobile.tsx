@@ -16,6 +16,7 @@ import { BiMedal } from 'react-icons/bi';
 
 import '../components/pages/ProductId-Mobile.css'
 import { IoIosClose } from 'react-icons/io';
+import { Loading } from '../components/Loading/Loading';
 
 export const ProductIdMobile = () => {
 
@@ -23,7 +24,7 @@ export const ProductIdMobile = () => {
 
     const locationSplit = location.pathname.split('/product/')[1];
 
-    const { data, isLoading, hasError } = useFetch<IProductId>(`https://api.mercadolibre.com/items/${ locationSplit }`);
+    const { data, isLoading } = useFetch<IProductId>(`https://api.mercadolibre.com/items/${ locationSplit }`);
 
     const { data: description } = useFetch<IDescriptionProductId>(`https://api.mercadolibre.com/items/${ locationSplit }/description`);
 
@@ -38,6 +39,9 @@ export const ProductIdMobile = () => {
         setLike(false);
         localStorage.setItem('likeProduct', 'false');
     }
+
+
+    if( isLoading ) return <Loading />
 
     return (
         <div className="general-container-mobile">

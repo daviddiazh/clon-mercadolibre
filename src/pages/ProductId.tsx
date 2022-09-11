@@ -12,11 +12,6 @@ import { ProductIdMobile } from "./ProductId-Mobile";
 
 export const ProductId = () => {
 
-    /**
-     * 
-     * otro clone: https://meli-practice-client.vercel.app/items/MLA931172973 - endpoints: https://github.com/facuperezbri/meli-practice-api/blob/main/index.js
-    **/
-
     const location = useLocation();
     const navigate = useNavigate();
     const locationSplit = location.pathname.split('/product/')[1];
