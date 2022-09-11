@@ -109,7 +109,7 @@ export const Home = () => {
                 </div>
 
                 <div className="content-container-suscription">
-                    <p>Consigue los mejores beneficios en Mercado Libre y Mercado Pago</p>
+                    <p style={{ padding: '0 30px' }}>Consigue los mejores beneficios en Mercado Libre y Mercado Pago</p>
                     <div className="content-suscription">
                         {
                             mockSuscription?.map( content => (

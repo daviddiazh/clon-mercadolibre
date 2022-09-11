@@ -177,7 +177,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(90deg,#a90f90 55%,#0c1a51);
+    background: linear-gradient(90deg, #a90f90 55%, #0c1a51);
     width: 100%;
     height: 100%;
     color: #fff;
@@ -204,7 +204,8 @@ main {
 }
 
 .content-container-suscription {
-    padding: 5px 30px 10px 30px;
+    /* padding: 5px 30px 10px 30px; */
+    padding: 5px 0px 10px 0px;
 }
 
 .content-suscription {
@@ -214,7 +215,7 @@ main {
 }
 
 .content-suscription > div {
-    width: 350px;
+    width: 300px;
     padding-bottom: 10px;
 }
 
@@ -440,16 +441,26 @@ main {
     .info-pay-item p:nth-child(1) {
         line-height: 17px; 
     }
+
+    .header-pricing-suscription h4 {
+        line-height: 13px;
+    }
 }
 
 @media (max-width: 445px) {
     .header-pricing-suscription  {
         margin-top: -10px;
-        margin-left: 80px;
+        margin-left: 10px;
     }
 
     .header-pricing-suscription h4 {
         line-height: 15px;
         margin-top: 13px;
     }
+
+    /* .header-suscription-level {
+        padding: 10px;
+    } */
+
+    
 }
