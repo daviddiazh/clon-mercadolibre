@@ -13,10 +13,6 @@ import { ProductIdMobile } from "./ProductId-Mobile";
 export const ProductId = () => {
 
     /**
-     * https://api.mercadolibre.com/items/MLC615879515 productID
-     * https://api.mercadolibre.com/items/MLC615879515/description description
-     * https://api.mercadolibre.com/users/550063615 shopID
-     * https://api.mercadolibre.com/sites/MLC/search?q=iphone search
      * 
      * otro clone: https://meli-practice-client.vercel.app/items/MLA931172973 - endpoints: https://github.com/facuperezbri/meli-practice-api/blob/main/index.js
     **/
