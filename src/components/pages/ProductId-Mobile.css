@@ -156,5 +156,27 @@
     .seller-info-mobile {
         margin-top: 0px;
         padding: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-info-seller {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: transparent;
+        border-radius: 7px;
+        padding: 0 15px;
+        margin: 15px 0;
+        cursor: pointer;
+    }
+
+    .more-info-seller-mobile {
+        color: #2a70d9;
+    }
+
+    .description-product-mobile {
+        padding: 0 15px;
     }
 }

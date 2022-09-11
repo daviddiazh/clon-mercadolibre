@@ -123,7 +123,6 @@ export const ProductIdMobile = () => {
                 </div>
             </div>
 
-            <div style={{ borderBottom: '1px solid rgba(0,0,0, 0.1)', width: '100%' }} />
 
             <div className="seller-info-mobile">
                 <p>Información sobre el vendedor</p>
@@ -171,9 +170,45 @@ export const ProductIdMobile = () => {
                     </div>
                 </div>
 
-                <p className="more-info-seller" style={{ fontSize: '14px', fontWeight: 500 }}>Ver más datos de este vendedor</p>
+                <button className="btn-info-seller">
+                    <p className="more-info-seller-mobile" style={{ fontSize: '14px', fontWeight: 500 }}>Ver más datos de este vendedor</p>
+                    <span>
+                        <FcNext />
+                    </span>
+                </button>
             </div>
 
+            <div className="description-product-mobile">
+                <h2>Descripción</h2>
+                <p>{ description?.plain_text }</p>
+            </div>
+
+            <div className="questions-container">
+                <h2>Preguntas y respuestas</h2>
+                <h4>¿Qué quieres saber?</h4>
+
+                <div style={{ marginLeft: '-5px' }}>
+                    <button className="btn-general-questions">Costo y tiempo de envío</button>
+                    <button className="btn-general-questions">Devoluciones gratis</button>
+                    <button className="btn-general-questions">Medios de pago</button>
+                    <button className="btn-general-questions">Gatantía</button>
+                </div>
+
+                <h4>Pregúntale al vendedor</h4>
+                <div className="question-box">
+                    <input 
+                        type="text" 
+                        placeholder="Escribe tu pregunta..."
+                    />
+                    <button>Preguntar</button>
+                </div>
+
+                <div className="without-questions">
+                    <p>Nadie hizo preguntas todavía.</p>
+                    <p>¡Haz la primera!</p>
+                </div>
+            </div>
+        
         </div>
     )
 }
