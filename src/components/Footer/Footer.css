@@ -3,6 +3,11 @@
     margin: 0px;
 }
 
+.second-container-footer {
+    max-width: 1090px;
+    margin: 0 auto;
+}
+
 .more-info-btn-container {
     background-color: #ebebee;
     display: flex;
@@ -52,11 +57,15 @@
 
 .container-imgs {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
+    max-width: 1090px;
+    margin: 0 auto;
 }
 
 .container-imgs img {
     margin-right: 20px;
     margin: 15px;
+    width: 150px;
+    height: 30px;
 }
 
 
