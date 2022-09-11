@@ -1,9 +1,14 @@
+.container-footer {
+    width: 100%;
+    margin: 0px;
+}
 
 .more-info-btn-container {
     background-color: #ebebee;
     display: flex;
     justify-content: center;
     padding-top: 60px;
+    margin: -15px;
 }
 
 .btn-more-info {
@@ -15,6 +20,7 @@
     font-weight: 600;
     border-radius: 5px 5px 0 0px;
     cursor: pointer;
+    margin: 0;
 }
 
 .btn-more-info span {
@@ -32,6 +38,7 @@
 
 .mock-links p {
     padding-right: 15px;
+    padding-top: 20px;
     font-size: 14px;
     cursor: pointer;
 }
@@ -42,7 +49,6 @@
     font-weight: 300;
     margin-top: -15px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding-bottom: 10px;
 }
 
 .container-imgs {
@@ -51,4 +57,20 @@
 
 .container-imgs img {
     margin-right: 20px;
+}
+
+
+@media(max-width: 610px) {
+    .mock-links {
+        display: none;
+    }
+
+    .copyright {
+        padding-top: 25px;
+    }
+
+    .container-imgs {
+        display: flex;
+        width: 100%;
+    }
 }

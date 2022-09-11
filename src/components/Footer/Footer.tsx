@@ -11,7 +11,7 @@ export const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <div>
+        <div className="container-footer">
             <div className="more-info-btn-container">
                 <button className="btn-more-info">
                     <p>Más información</p>
