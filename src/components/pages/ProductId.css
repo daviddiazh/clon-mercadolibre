@@ -163,3 +163,12 @@
     color: #2a70d9;
     cursor: pointer;
 }
+
+
+
+/* ------------- MOBILE ------------- */
+@media(max-width: 1015px) {
+    .general-container-productId {
+        display: none;
+    }
+}

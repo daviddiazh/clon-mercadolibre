@@ -2,6 +2,7 @@ import React, { FC, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useFetch } from '../../hooks/useFetch';
 import { IProductId } from '../../interfaces/ProductId';
+import { ISellerId } from '../../interfaces/SellerId';
 
 import visa from '../../assets/logos-credit-cards/visa.png';
 import mcard from '../../assets/logos-credit-cards/mcard.png';
@@ -14,11 +15,10 @@ import { TbAward, TbTruckDelivery } from 'react-icons/tb';
 import { IoReturnDownBackOutline, IoShieldCheckmarkOutline } from 'react-icons/io5';
 import { BiChevronDown, BiMedal } from "react-icons/bi";
 import { MdFavorite, MdOutlineFavoriteBorder } from "react-icons/md";
-
-import './details-product.css';
 import { AiOutlineTrophy } from 'react-icons/ai';
 import { FcBusinessman } from 'react-icons/fc';
-import { ISellerId } from '../../interfaces/SellerId';
+
+import './details-product.css';
 
 export const DetailsProductId: FC = () => {
 
@@ -146,7 +146,7 @@ export const DetailsProductId: FC = () => {
 
                 <div className="reputation-shops">
                     <div>
-                        <h3>{ seller?.seller_reputation?.transactions?.completed }</h3>
+                        <h3>{ seller?.seller_reputation?.transactions?.completed || 245 }</h3>
                         <p>Ventas en los últimos 365 días</p>
                     </div>
                     <div>
