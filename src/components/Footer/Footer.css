@@ -48,15 +48,15 @@
     font-size: 12px;
     font-weight: 300;
     margin-top: -15px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .container-imgs {
-    margin: 15px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .container-imgs img {
     margin-right: 20px;
+    margin: 15px;
 }
 
 
@@ -72,5 +72,10 @@
     .container-imgs {
         display: flex;
         width: 100%;
+    }
+
+    .container-imgs img {
+        width: 120px;
+        height: 30px;
     }
 }
