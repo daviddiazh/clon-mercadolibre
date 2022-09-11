@@ -15,6 +15,7 @@ import { MdFavorite, MdOutlineFavoriteBorder } from 'react-icons/md';
 import { BiMedal } from 'react-icons/bi';
 
 import '../components/pages/ProductId-Mobile.css'
+import { IoIosClose } from 'react-icons/io';
 
 export const ProductIdMobile = () => {
 
@@ -83,7 +84,12 @@ export const ProductIdMobile = () => {
                         <AiOutlineTrophy />
                     </span>
                     <div className="content-alert-buy">
-                        <p>Cómpralo, sube de nivel y ahorra 15% en tus envíos</p>
+                        <div className="title-and-close-alert">
+                            <p>Cómpralo, sube de nivel y ahorra 15% en tus envíos</p>
+                            <span className="close-alert-buy">
+                                <IoIosClose />
+                            </span>
+                        </div>
                         <p style={{ marginTop: -10 }}>Es tu próximo beneficio de Mercado Puntos</p>
                     </div>
                 </div>

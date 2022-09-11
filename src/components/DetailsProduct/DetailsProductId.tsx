@@ -19,6 +19,7 @@ import { AiOutlineTrophy } from 'react-icons/ai';
 import { FcBusinessman } from 'react-icons/fc';
 
 import './details-product.css';
+import { IoIosClose } from 'react-icons/io';
 
 export const DetailsProductId: FC = () => {
 
@@ -85,9 +86,16 @@ export const DetailsProductId: FC = () => {
                     <span className="icon-alert-buy">
                         <AiOutlineTrophy />
                     </span>
-                    <div className="content-alert-buy">
-                        <p>Cómpralo, sube de nivel y ahorra 15% en tus envíos</p>
-                        <p style={{ marginTop: -10 }}>Es tu próximo beneficio de Mercado Puntos</p>
+                    <div>
+                        <div className="content-alert-buy">
+                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                <p>Cómpralo, sube de nivel y ahorra 15% en tus envíos</p>
+                                <span className="close-alert-buy">
+                                    <IoIosClose />
+                                </span>
+                            </div>
+                            <p style={{ marginTop: -10 }}>Es tu próximo beneficio de Mercado Puntos</p>
+                        </div>
                     </div>
                 </div>
 
